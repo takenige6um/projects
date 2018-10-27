@@ -1,0 +1,98 @@
+= terminalのcommand
+[2018-10-27 23:22] 
+
+
+inomoto@YOSHIO:~(master⚡) »   source .bash_profile
+
+inomoto@YOSHIO:~(master⚡) »   emacs -version
+
+
+
+inomoto@YOSHIO:~(master⚡) »   exit
+
+inomoto@YOSHIO:~(master⚡) »   clear
+
+
+
+inomoto@YOSHIO:~(master⚡) »   node -v
+
+inomoto@YOSHIO:~(master⚡) »   gulp
+
+inomoto@YOSHIO:~(master⚡) »   node app.js
+
+
+
+inomoto@YOSHIO:~(master⚡) »   pwd
+
+inomoto@YOSHIO:~(master⚡) »   uname -n
+
+inomoto@YOSHIO:~(master⚡) »   whoami
+
+inomoto@YOSHIO:~(master⚡) »   echo $SHELL
+
+inomoto@YOSHIO:~(master⚡) »   echo "$PS1"
+
+
+
+inomoto@YOSHIO:~(master⚡) »   ls -a
+
+inomoto@YOSHIO:~(master⚡) »   zsh_stats
+
+inomoto@YOSHIO:~(master⚡) »   upgrade_oh_my_zsh
+
+
+
+inomoto@YOSHIO:~(master⚡) »   take ~/Desktop/tetsuyaI/
+
+inomoto@YOSHIO:~(master⚡) »   mkdir ~/Desktop/igen/electric_board/
+
+
+inomoto@YOSHIO:~(master⚡) »   cat -l
+
+
+  ===========================================================
+
+
+
+inomoto@YOSHIO:~(master⚡) »   cat ~/.ssh/id_rsa.pub
+
+inomoto@YOSHIO:~(master⚡) »   ssh -T git@github.com
+
+
+
+inomoto@YOSHIO:~(master⚡) »   git clone git@github.com:takenige6um/igenfunctional-test.git
+
+inomoto@YOSHIO:~(master⚡) »   git clone git@github.com:takenige6um/projects.git
+
+
+
+inomoto@YOSHIO:~(master⚡) »   cd ~/igenfunctional-test
+
+inomoto@YOSHIO:~(master⚡) »   cd projects
+
+
+
+inomoto@YOSHIO:~(master⚡) »   git status
+
+
+
+inomoto@YOSHIO:~(master⚡) »   git add index.html
+
+inomoto@YOSHIO:~(master⚡) »   git add dotfiles/
+
+
+
+inomoto@YOSHIO:~(master⚡) »   git commit -m "Add hello world script by html"
+
+inomoto@YOSHIO:~(master⚡) »   git commit -m "Add dotfiles dir"
+
+
+
+inomoto@YOSHIO:~(master⚡) »   git log
+
+
+
+inomoto@YOSHIO:~(master⚡) »   git push
+inomoto@YOSHIO:~(master⚡) » 
+
+
