@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang=ja>
+<head>
+    <meta charset="utf-8">
+    <title>sample1</title>
+</head>
+<body>
+    <p>今日の貴方の運勢は...?</p>
+    <input id="fortune_button" type="button" value="占う" onclick="getFortuneResult()">
+    <div>
+        <p id="result_text">何が出るかはお楽しみ!</p>
+        <img id="result_image" src="">
+    </div>
+    <script>
+        // 占い回数を初期化
+        var maxCount = 10;
+        var count = 0;
+
+        function getFortuneResult(){
+	        console.log('function getFortuneResult を実行');
+            // 占い回数をカウント 
+            count++;
+
+            // 占い回数が上限を超えたらThanks表示
+            if (count > maxCount) {
+                thanks();
+                return;
+            } 
+
+            // 占い結果を定義
+            var results = ["食欲運UP!!!", "恋愛運UP!!!", "schoo運UP!!!","友達運UP!!!"];
+
+            // 占い結果をランダムに決定
+            var result = Math.floor(Math.random() * results.length);
+  
+            // 占い結果の出力
+            var resultText = document.getElementById("result_text");
+            resultText.textContent = "ﾟ+｡:.ﾟ" + results[result] + ".:｡+ﾟ";
+
+            // 占い結果画像の出力
+            var resultImage = document.getElementById("result_image");
+            resultImage.src = result + ".png";
+        }
+
+        function thanks() {
+            console.log('function thanks を実行');
+        
+            // 占い結果の出力
+            var resultText = document.getElementById("result_text");
+            resultText.textContent = "ﾟ+｡:.ﾟ沢山占いありがとにゃ！.:｡+ﾟ";
+
+            // 占い結果画像の出力
+            var resultImage = document.getElementById("result_image");
+            resultImage.src = "thanks.png";
+
+            // 占うボタンを消す
+            document.body.removeChild(document.getElementById("fortune_button"));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+
+((digest . "5908b480404ceaa73edda88e355e5a64") (undo-list nil (3305 . 3306) (3278 . 3279) (t 22808 22653 0 0) (apply 0 3278 3304 cua--rect-undo-handler [3278 3304 0 0 2 0 t nil] t 3278 3304) nil ("#" . 3304) ("#" . 3278) (t 22808 16187 0 0) (apply 0 3278 3305 cua--rect-undo-handler [3278 3305 0 0 2 0 t nil] t 3278 3305)))

@@ -1,0 +1,165 @@
+= Eclipse shortcut
+[2018-06-02 22:35] >>> ~/projects/dotfiles/.emacs.d/init.el
+
+2012-05-25
+Eclipseショートカットキー Mac & Windows 対応表
+Eclipse
+最近MacでもEclipseを使う機会が増えてきたのですが、WindowsのEclipseのショートカットキーと少し異なる部分があり、戸惑うことがあります。というわけで、メモがてらショートカットキーの対応表を作ってみました。基本的に自分のよく使うコマンドのみを載せています。
+
+
+
+コマンド (英語)	Mac	Windows
+
+
+
+
+編集
+
+コンテンツ・アシスト (Content Assist)	control + Space	Ctrl + Space
+コンテキスト情報 (Context Information)	shift + control + Space	Ctrl + Shift + Space
+単語補完 (Word Completion)	control + .	Alt + /
+クイック・フィックス (Quick Fix)	command + 1	Ctrl + 1
+クイック・アシスト (Quick Assist)	command + 2	Ctrl + 2
+ソース・クイック・メニューを表示 (Show Source Quick Menu)	option + command + S	Alt + Shift + S
+リファクタリング・クイック・メニューの表示 (Show Refactor Quick Menu)	option + command + T	Alt + Shift + T
+「囲む」クイック・メニュー (Surround With Quick Menu)	option + command + Z	Alt + Shift + Z
+ツールチップ説明の表示 (Show Tooltip Description)	F2	F2
+指定行へジャンプ (Go to Line)	command + L	Ctrl + L
+検索と置換 (Find and Replace)	command + F	Ctrl+F
+次を検索 (Find Next)	command + K	Ctrl + K
+前を検索 (Find Previous)	shift + command + K	Ctrl + Shift + K
+インクリメンタル検索 (Incremental Find)	command + J	Ctrl + J
+逆インクリメンタル検索 (Incremental Find Reverse)	shift + command + J	Ctrl + Shift + J
+エンクロージング要素の選択 (Select Enclosing Element)	shift + control + Up	Alt + Shift + Up
+前の要素を選択 (Select Previous Element)	shift + control + Left	Alt + Shift + Left
+次の要素を選択 (Select Next Element)	shift + control + Right	Alt + Shift + Right
+前回の選択を復元 (Restore Last Selection)	shift + control + Down	Alt + Shift + Down
+ブロック選択の切り替え (Toggle Block Selection)	option + command + A	Alt + Shift + A
+すべて展開 (Expand All)	shift + command + Numpad *	Ctrl + Shift + Numpad *
+すべて縮小表示 (Collapse All)	shift + command + Numpad /	Ctrl + Shift + Numpad /
+展開 (Expand)	command + Numpad +	Ctrl + Numpad +
+縮小 (Collapse)	command + Numpad –	Ctrl + Numpad –
+フォーマット (Format)	shift + command + F	Ctrl + Shift + F
+コメントの切り替え (Toggle Comment)	command + /	Ctrl+/
+行削除 (Delete Line)	command + D	Ctrl + D
+行の末尾まで削除 (Delete to End of Line)	shift + command + fn + delete(forward delete)	Ctrl + Shift + Delete
+小文字に変更 (To Lower Case)	shift + command + Y	Ctrl + Shift + Y
+大文字に変更 (To Upper Case)	shift + command + X	Ctrl + Shift + X
+インデントの訂正 (Correct Indentation)	command + I	Ctrl + I
+インポートの編成 (Organize Imports)	shift + command + O	Ctrl + Shift + O
+Javadoc コメントを追加 (Add Javadoc Comment)	option + command + J	Alt + Shift + J
+現在行の下に行を挿入 (Insert Line Below Current Line)	shift + return	Shift + Enter
+現在行の上に行を挿入 (Insert Line Above Current Line)	shift + command + return	Ctrl + Shift + Enter
+行の結合 (Join Lines)	なし	Ctrl + Alt + J
+行をコピー (Copy Lines)	option + command + Down	Ctrl + Alt + Down
+行を複写 (Duplicate Lines)	option + command + Up	Ctrl + Alt + Up
+1 行下へ移動 (Move Lines Down)	option + Down	Alt + Down
+1 行上へ移動 (Move Lines Up)	option + Up	Alt + Up
+元に戻す (Undo)	command + Z	Ctrl + Z
+やり直し (Redo)	shift + command + Z	Ctrl + Y
+行のスクロールアップ (Scroll Line Up)	control + Up	Ctrl + Up
+行のスクロールダウン (Scroll Line Down)	control + Down	Ctrl + Down
+
+
+
+ナビゲート
+
+宣言を開く (Open Declaration)	F3	F3
+型階層を開く (Open Type Hierarchy)	F4	F4
+クイック階層 (Quick Hierarchy)	command + T	Ctrl + T
+クイック・アウトライン (Quick Outline)	command + O	Ctrl + O
+リソースを開く (Open Resource)	shift + command + R	Ctrl + Shift + R
+型を開く (Open Type)	shift + command + T	Ctrl + Shift + T
+階層で型を開く (Open Type in Hierarchy)	shift + command + H	Ctrl + Shift + H
+呼び出し階層を開く (Open Call Hierarchy)	control + option + H	Ctrl + Alt + H
+次の注釈 (Next Annotation)	command + .	Ctrl + .
+前の注釈 (Previous Annotation)	shift + command + .	Ctrl + ,
+前のメンバーへジャンプ (Go to Previous Member)	control + option + Up	Ctrl + Shift + Up
+次のメンバーへジャンプ (Go to Next Member)	control + option + Down	Ctrl + Shift + Down
+対応する大括弧にジャンプ (Goto Matching Token)	shift + command + P	Ctrl + Shift + P
+最後の編集位置を示す (Last Edit Location)	control + Q	Ctrl + Q
+ヒストリーを戻る (Backward History)	option + command + Left, command + [	Alt + Left
+ヒストリーを進む (Forward History)	option + command + Right, command + ]	Alt + Right
+添付された Javadoc を開く (Open Attached Javadoc)	shift + F2	Shift + F2
+
+
+
+
+リファクタリング
+
+名前変更 (Rename)	option + command + R	Alt + Shift + R
+メソッドの抽出 (Extract Method)	option + command + M	Alt + Shift + M
+ローカル変数の抽出 (Extract Local Variable)	option + command + L	Alt + Shift + L
+インライン化 (Inline)	option + command + I	Alt + Shift + I
+
+
+
+
+ファイル
+
+新規 (New)	command + N	Ctrl + N
+新規メニュー (New Menu)	option + command + N	Alt + Shift + N
+保管 (Save)	command + S	Ctrl + S
+すべて保管 (Save All)	shift + command + S	Ctrl + Shift + S
+閉じる (Close)	command + W	Ctrl + W, Ctrl + F4
+すべて閉じる (Close All)	shift + command + W	Ctrl + Shift + W
+プロパティー (Properties)	option + return	Alt + Enter
+ビュー/パースペクティブ
+次のビュー (Next View)	command + F7	Ctrl + F7
+前のビュー (Previous View)	shift + command + F7	Ctrl + Shift + F7
+次のエディター (Next Editor)	command + F6	Ctrl + F6
+前のエディター (Previous Editor)	shift + command + F6	Ctrl + Shift + F6
+次のパースペクティブ (Next Perspective)	command + F8	Ctrl + F8
+前のパースペクティブ (Previous Perspective)	shift + command + F8	Ctrl + Shift + F8
+前のタブ (Previous Tab)	control + fn + Up(page up)	Ctrl + PageUp
+次のタブ (Next Tab)	control + fn + Down(page down)	Ctrl + PageDown
+前のサブ・タブ (Previous Sub-Tab)	option + fn + Up(page up)	Alt + PageUp
+次のサブ・タブ (Next Sub-Tab)	option + fn + Down(page down)	Alt + PageDown
+エディターをアクティブにする (Activate Editor)	command + F12	F12
+エディターの即時切り替え (Quick Switch Editor)	command + E	Ctrl + E
+アクティブ・ビューまたはエディターの最大化 (Maximize Active View or Editor)	control + M	Ctrl + M
+「システム・メニュー」を表示 (Show System Menu)	shift + command + F10	Alt + –
+「ビューの表示」メニュー (Show View Menu)	command + F10	Ctrl + F10
+ビューの表示 (Show View)	option + command + Q	Alt + Shift + Q
+
+
+
+
+実行/デバッグ
+
+実行 (Run)	shift + command + F11	Ctrl + F11
+起動方法を指定して実行 (Run As)	option + command + X	Alt + Shift + X
+デバッグ (Debug)	command + F11	F11
+起動方法を指定してデバッグ (Debug As)	control + command + D	Alt + Shift + D
+ステップイン (Step Into)	F5	F5
+ステップ・オーバー (Step Over)	F6	F6
+ステップ・リターン (Step Return)	F7	F7
+再開 (Resume)	F8	F8
+終了 (Terminate)	command + F2	Ctrl + F2
+指定行まで実行 (Run to Line)	command + R	Ctrl + R
+選択項目にステップイン (Step Into Selection)	option + F5	Ctrl + F5
+インスペクション (Inspect)	shift + command + I	Ctrl + Shift + I
+ブレークポイントの切り替え (Toggle Breakpoint)	shift + command + B	Ctrl + Shift + B
+
+
+
+
+検索
+
+「検索」ダイアログを開く (Open Search Dialog)	control + H	Ctrl + H
+ワークスペース内の参照 (References in Workspace)	shift + command + G	Ctrl + Shift + G
+ワークスペース内でテキストを検索 (Find Text in Workspace)	option + command + G	Ctrl + Alt + G
+
+
+
+
+その他
+
+クイック・アクセス (Quick Access)	command + 3	Ctrl + 3
+キー・アシストを表示 (Show Key Assist)	shift + command + L	Ctrl + Shift + L
+
+
+
+
+
+ふちゃお (id:hutyao) 6 years ago

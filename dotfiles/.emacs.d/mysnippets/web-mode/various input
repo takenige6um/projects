@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: various input
+# key: inputla
+# --
+<h1>入力フォームのいろいろ</h1>
+<p>年月日：<input type="date"></p>
+<p>時間：<input type="time"></p>
+<p>数字：<input type="number"></p>
+<p>レンジ：<input type="range"></p>
+<p>色：<input type="color"></p>
+<p>電話：<input type="tel"></p>
+<p>検索：<input type="search"></p>
+<p>URL：<input type="url"></p>
+<p>電子メール：<input type="email"></p>

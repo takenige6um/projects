@@ -1,0 +1,4 @@
+# key: img
+# name: img
+# --
+<img src="img/$1" width="$2" height="$3" alt="$4" class="$5">$0

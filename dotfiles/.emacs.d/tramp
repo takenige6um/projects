@@ -1,0 +1,6 @@
+;; -*- emacs-lisp -*- <18/10/07 02:17:33 /Users/inomoto/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["scp" "inomoto" "YOSHIO" nil nil]
+  nil))

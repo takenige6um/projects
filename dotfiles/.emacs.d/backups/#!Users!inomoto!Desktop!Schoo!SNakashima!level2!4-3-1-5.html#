@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>4-3-1.History API 1</title> <!-- 上手くいかない -->
+</head>
+<body>
+	<h1>history5のページ</h1>
+	<p><a href="4-3-1.html">最初へ</a></p>
+	<ol>
+		<li><p>履歴の数：<span id="length"></span></p>
+		<li><button id="back">戻る</button></li>
+		<li><button id="forward">進む</button></li>
+		<li><input type="text" id="input">ページだけ<button id="go">前後する</button></li>
+		<li><button id="add">履歴を追加</button></li>
+		<li><button id="replace">履歴を上書き</button></li>
+	</ol>
+	
+<script>
+	function $(id){return document.getElementById(id);}
+	
+	$("length").innerHTML = window.history.length;
+	
+	$("back").addEventListener("click",function(){
+		window.history.back();
+	});
+	
+	$("forward").addEventListener(
+	"click",function(){
+		window.history.forward();
+	});
+	$("go").addEventListener("click",function(){
+		window.history.go($("input").value);
+	});
+	$("add").addEventListener("click",function(){
+		window.history.pushState(null,null,"historyADD.html");
+	});
+	$("replace").addEventListener("click",function(){
+		window.history.replaceState(null,null,"historyREPLACE.html");
+	});
+</script>
+</body>
+</html>

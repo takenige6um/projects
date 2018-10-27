@@ -1,0 +1,777 @@
+inomoto@YOSHIO:~/projects/dotfiles/.emacs.d(master⚡) » cd      
+inomoto@YOSHIO:~(master⚡) » emacs -version
+GNU Emacs 22.1.1
+Copyright (C) 2007 Free Software Foundation, Inc.
+GNU Emacs comes with ABSOLUTELY NO WARRANTY.
+You may redistribute copies of Emacs
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING.
+inomoto@YOSHIO:~(master⚡) » brew update   
+Updated 2 taps (homebrew/core, homebrew/emacs).
+==> New Formulae
+angle-grinder       gcc@7               libde265            unp64
+apache-arrow-glib   genact              libplctag           util-linux
+aws-es-proxy        gitlab-gem          mkl-dnn             woff2
+cglm                graph-tool          netdata             xidel
+click               hapi-fhir-cli       patchelf            yamllint
+cquery              hcloud              petsc
+deark               jrtplib             phplint
+deployer            libbitcoin-client   stm32flash
+==> Updated Formulae
+mysql ✔                                  libmatio
+node ✔                                   libmatroska
+zsh ✔                                    libmonome
+abcm2ps                                  libmwaw
+abcmidi                                  libofx
+abnfgen                                  libphonenumber
+abyss                                    libqalculate
+acme                                     libraw
+acpica                                   libre
+activemq                                 librealsense
+adplug                                   librem
+afsctool                                 libressl
+aircrack-ng                              librtlsdr
+akamai                                   libsass
+algernon                                 libsoup
+amazon-ecs-cli                           libsoxr
+amqp-cpp                                 libspectre
+angular-cli                              libspectrum
+annie                                    libstfl
+ansible                                  libtensorflow
+ansible-cmdb                             libtiff
+apache-arrow                             libtorrent-rasterbar
+apache-drill                             libuv
+apache-geode                             libvirt
+apibuilder-cli                           libwps
+apktool                                  libxc
+apm-server                               libzip
+arangodb                                 link-grammar
+archivemount                             linkerd
+armadillo                                links
+armor                                    liquibase
+arpack                                   lldpd
+artifactory                              lmod
+asciidoctor                              log4cplus
+asio                                     logstash
+aspectj                                  logtalk
+atari800                                 lolcat
+atdtool                                  lynis
+atlassian-cli                            lysp
+aubio                                    macvim
+audacious                                makeself
+auditbeat                                mame
+autossh                                  mapnik
+aws-sdk-cpp                              mariadb@10.0
+aws-shell                                math-comp
+awscli                                   maxwell
+azure-cli                                mbedtls
+babeld                                   mediaconch
+babl                                     mednafen
+bacula-fd                                meson
+baresip                                  metabase
+bartycrouch                              metaproxy
+basex                                    metricbeat
+bash-completion@2                        mg
+bazel                                    mgba
+bdw-gc                                   mighttpd2
+bedops                                   mikutter
+bento4                                   mill
+bettercap                                minidlna
+bibtex2html                              minisat
+binaryen                                 miniupnpc
+binwalk                                  mint
+bit                                      mkvtoolnix
+bitcoin                                  mlt
+bitrise                                  mm-common
+blockhash                                mmseqs2
+bluepill                                 moc
+blueutil                                 modd
+bochs                                    monero
+boost                                    mongo-c-driver
+boost-bcp                                mongo-orchestration
+boost-build                              mongodb
+boost-mpi                                mpd
+boost-python                             mpich
+boost-python3                            mpv
+botan                                    mpw
+bower                                    mrboom
+brotli                                   mruby
+burp                                     mutt
+byteman                                  mypy
+bzt                                      mysql-sandbox
+caddy                                    mysql@5.5
+caffe                                    mysql@5.6
+cake                                     nano
+calicoctl                                nanopb-generator
+camlp5                                   nativefier
+cayley                                   ncmpc
+certbot                                  ncmpcpp
+cfitsio                                  nco
+cfr-decompiler                           ncview
+cgal                                     neko
+cgrep                                    netcdf
+chakra                                   nethack
+chapel                                   netpbm
+check_postgres                           nexus
+checkbashisms                            nfdump
+checkstyle                               nghttp2
+chronograf                               nginx
+cimg                                     nifi
+cjdns                                    nnn
+ckan                                     node-build
+clac                                     node@6
+clamav                                   nomad
+cliclick                                 notmuch
+clojure                                  nss
+clojurescript                            ntl
+cmake                                    nudoku
+cockatrice                               nuget
+cockroach                                numpy
+coffeescript                             nvm
+composer                                 ocaml-findlib
+conan                                    ocrmypdf
+conjure-up                               octave
+consul                                   odpi
+container-diff                           offlineimap
+convox                                   oniguruma
+coq                                      open-mpi
+coreos-ct                                open-scene-graph
+corsixth                                 openblas
+cp2k                                     opencv
+cpanminus                                opencv@2
+cryptopp                                 openexr
+ctl                                      openfortivpn
+cython                                   openimageio
+dar                                      openrtsp
+dartsim                                  openvdb
+dash                                     openvpn
+datetime-fortran                         optipng
+davmail                                  ortp
+dbhash                                   osm2pgsql
+dbus                                     osquery
+dcd                                      osrm-backend
+dehydrated                               ott
+dependency-check                         packer
+derby                                    packetbeat
+dhall-json                               packmol
+di                                       paket
+diamond                                  pam-u2f
+diff-pdf                                 pam_yubico
+discount                                 pandoc
+dislocker                                pandoc-citeproc
+django-completion                        pandoc-crossref
+dmd                                      pango
+dmtx-utils                               parallel
+dnscrypt-proxy                           pbrt
+dnsdist                                  pc6001vx
+docfx                                    pcb
+docker                                   pcl
+docker-completion                        pcre2
+docker-compose                           pdal
+docker-compose-completion                pdfgrep
+docker2aci                               pdfpc
+dockviz                                  pdftoedn
+doctl                                    pdftoipe
+draco                                    pegtl
+dscanner                                 percona-server
+dub                                      percona-server-mongodb
+duck                                     percona-toolkit
+dungeon                                  perl
+duti                                     perl@5.18
+dvm                                      pgplot
+dxpy                                     pgpool-ii
+dynare                                   php
+ejabberd                                 php@5.6
+elasticsearch                            php@7.0
+elasticsearch@2.4                        php@7.1
+elasticsearch@5.6                        phpunit
+embulk                                   pianobar
+emscripten                               picard-tools
+encfs                                    pick
+erlang                                   pilosa
+erlang@18                                pioneers
+etcd                                     pipenv
+etsh                                     planck
+evince                                   plantuml
+exim                                     plplot
+faas-cli                                 pmd
+fastme                                   poco
+feh                                      poppler
+ffmbc                                    postgis
+ffmpeg                                   povray
+ffmpeg2theora                            ppsspp
+ffmpegthumbnailer                        pqiv
+ffms2                                    presto
+fibjs                                    primesieve
+field3d                                  proguard
+fig2dev                                  pspg
+file-formula                             pstoedit
+filebeat                                 ptex
+fio                                      puzzles
+firebase-cli                             pxz
+fits                                     py2cairo
+flann                                    py3cairo
+flashrom                                 pybind11
+flow                                     pycodestyle
+fluent-bit                               pyenv
+fn                                       pyexiv2
+fobis                                    pyinvoke
+folly                                    pypy3
+fontconfig                               python@2
+fonttools                                qcli
+fossil                                   qd
+fq                                       qemu
+freeciv                                  qmmp
+freeipmi                                 qrupdate
+freeling                                 qscintilla2
+freeradius-server                        qtfaststart
+freetds                                  quantlib
+freetype                                 quex
+frege                                    quicktype
+fswatch                                  r
+fuego                                    radare2
+fuse-emulator                            rancher-cli
+futhark                                  ratfor
+fwup                                     rawtoaces
+gauge                                    raylib
+gcc                                      rclone
+gdcm                                     recoverjpeg
+gdk-pixbuf                               remctl
+geckodriver                              reposurgeon
+gedit                                    restview
+gegl                                     rgbds
+get-flash-videos                         rhash
+ghc                                      rmlint
+ghostscript                              robot-framework
+gifski                                   rocksdb
+gist                                     rom-tools
+git-annex                                root
+git-cola                                 rtf2latex2e
+git-fixup                                ruby-build
+git-sizer                                saltstack
+git-town                                 sbcl
+gitbucket                                sbt
+gitlab-runner                            scala
+gjs                                      scala@2.11
+glib                                     scalapack
+globus-toolkit                           scale2x
+glslang                                  scamper
+gmsh                                     scipy
+gmt                                      scm-manager
+gmt@4                                    scrcpy
+gnumeric                                 scw
+gnupg                                    sdb
+gnuplot                                  sdcc
+gnuradio                                 sdl2_gfx
+go                                       sfcgal
+go-jira                                  sfk
+go@1.9                                   shadowsocks-libev
+gobject-introspection                    shml
+gocr                                     shogun
+godep                                    shyaml
+goffice                                  silk
+gollum                                   singular
+gomplate                                 sip
+goose                                    siril
+gperftools                               skaffold
+gpgme                                    skafos
+gphoto2                                  snakemake
+gr-osmosdr                               snapcraft
+gradle                                   softhsm
+grafana                                  sonarqube
+grails                                   sops
+graphicsmagick                           source-highlight
+grc                                      sourcekitten
+grib-api                                 sourcery
+gromacs                                  sox
+groonga                                  spades
+grpc                                     sparse
+gsoap                                    sphinx-doc
+gst-plugins-good                         spigot
+gtk+3                                    spotbugs
+gtksourceview3                           sqldiff
+gws                                      sqlite
+hadolint                                 sqlite-analyzer
+handbrake                                sqliteodbc
+haproxy                                  sqlmap
+haskell-stack                            sratoolkit
+hdf5                                     src
+hdf5@1.8                                 srt
+heartbeat                                subversion
+heroku                                   sundials
+highlight                                svgcleaner
+hledger                                  swift
+hlint                                    swiftformat
+homebrew/emacs/editorconfig-emacs        swiftlint
+homebrew/emacs/fountain-mode             swimat
+homebrew/emacs/gnorb                     syncthing
+homebrew/emacs/magit                     synfig
+homebrew/emacs/mastodon-mode             tee-clc
+homebrew/emacs/muse                      telegraf
+homebrew/emacs/org-mode                  teleport
+homebrew/emacs/rainbow-mode              tenyr
+html-xml-utils                           terraform
+htmldoc                                  terragrunt
+htop                                     testssl
+hugo                                     texmath
+hypre                                    tgui
+i2p                                      thefuck
+ice                                      tika
+ilmbase                                  tile38
+imagemagick                              timelimit
+imagemagick@6                            tippecanoe
+imake                                    tj
+imlib2                                   tmux
+influxdb                                 tmuxinator-completion
+inspircd                                 todo-txt
+instead                                  tokei
+internetarchive                          tomcat
+iozone                                   traefik
+ivykis                                   trafficserver
+jabba                                    transmission
+jags                                     travis
+jansson                                  tundra
+jbake                                    tup
+jdupes                                   twarc
+jena                                     txr
+jenkins                                  typescript
+jenkins-job-builder                      uftp
+jenkins-lts                              uhd
+jetty                                    unbound
+jfrog-cli-go                             unpaper
+jhipster                                 unrar
+joplin                                   upscaledb
+jpegoptim                                urh
+jruby                                    utf8proc
+json-fortran                             vagrant-completion
+juju                                     vala
+jump                                     valabind
+jvgrep                                   varnish@4
+kafka                                    vault
+kallisto                                 veclibfort
+kedge                                    vim
+keychain                                 vim@7.4
+kibana                                   visp
+kibana@5.6                               vte3
+knot                                     vtk
+knot-resolver                            wabt
+kompose                                  watch
+kops                                     watson
+kotlin                                   webp
+krb5                                     webpack
+kube-aws                                 wesnoth
+kubectx                                  widelands
+kubeless                                 wildfly-as
+kubernetes-cli                           wine
+kubernetes-helm                          wireguard-tools
+lammps                                   wireshark
+lapack                                   wla-dx
+launch                                   wp-cli
+lcdf-typetools                           wpcli-completion
+ldc                                      wtf
+lean                                     xmrig
+lean-cli                                 xonsh
+ledger                                   xrootd
+leptonica                                xtensor
+lgogdownloader                           xxhash
+libbi                                    xz
+libbitcoin                               yaf
+libbitcoin-explorer                      yarn
+libbpg                                   yash
+libcouchbase                             yaws
+libcue                                   yaz
+libdazzle                                ykman
+libdill                                  ykpers
+libebml                                  yle-dl
+libetonyek                               you-get
+libfaketime                              youtube-dl
+libfixbuf                                zabbix
+libgpg-error                             zanata-client
+libgphoto2                               zbar
+libgsf                                   zenity
+libhttpseverywhere                       znapzend
+libical                                  znc
+liblwgeom                                zookeeper
+libmagic
+==> Renamed Formulae
+geth -> ethereum
+==> Deleted Formulae
+i3                         i3status                   monotone
+inomoto@YOSHIO:~(master⚡) » emacs -version
+GNU Emacs 22.1.1
+Copyright (C) 2007 Free Software Foundation, Inc.
+GNU Emacs comes with ABSOLUTELY NO WARRANTY.
+You may redistribute copies of Emacs
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING.
+inomoto@YOSHIO:~(master⚡) » source .bash_profile
+inomoto@YOSHIO:~(master⚡) » 
+                                                                                
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » emacs -version      
+GNU Emacs 25.1.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+GNU Emacs comes with ABSOLUTELY NO WARRANTY.
+You may redistribute copies of GNU Emacs
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING.
+inomoto@YOSHIO:~(master⚡) » uname -n            
+YOSHIO.local
+inomoto@YOSHIO:~(master⚡) » upgrade_oh_my_zsh   
+Updating Oh My Zsh
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+There was an error updating. Try again later?
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » upgrade_oh_my_zsh
+Updating Oh My Zsh
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+There was an error updating. Try again later?
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » cd ~/.oh_my_zsh 
+cd: no such file or directory: /Users/inomoto/.oh_my_zsh
+inomoto@YOSHIO:~(master⚡) »uname -n                     1 ↵
+YOSHIO.local
+inomoto@YOSHIO:~(master⚡) » ls -a               
+$
+.
+..
+.CFUserTextEncoding
+.DS_Store
+.Trash
+.antigen
+.atom
+.babelrc
+.bash_history
+.bash_profile
+.bash_sessions
+.chpwd-recent-dirs
+.eclipse
+.emacs.d
+.git
+.gitconfig
+.gitignore_global
+.hgignore_global
+.howm-keys
+.mysql_history
+.npm
+.nvm
+.oh-my-zsh
+.oracle_jre_usage
+.p2
+.profile
+.ssh
+.stCommitMsg
+.swp
+.terminfo
+.tooling
+.v8flags.5.1.281.98.dbf9c88c537c3cd77db3c223e74a62ef.json
+.v8flags.5.5.372.43.inomoto.json
+.vim
+.viminfo
+.zcompdump
+.zcompdump-YOSHIO-5.3.1
+.zcompdump-YOSHIOのMacBook-5.3
+.zcompdump-YOSHIOのMacBook-5.3.1
+.zsh
+.zsh-update
+.zsh_history
+.zshrc
+.zshrc.pre-oh-my-zsh
+.zshrc.swp
+Applications
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+Pictures
+Public
+ctags-5.8
+eterm-color.ti
+example.js
+global-6.1
+node_modules
+package.json
+projects
+sakura
+inomoto@YOSHIO:~(master⚡) » cd ~/.oh_my_zsh
+cd: no such file or directory: /Users/inomoto/.oh_my_zsh
+inomoto@YOSHIO:~(master⚡) »uname -n                     1 ↵
+YOSHIO.local
+inomoto@YOSHIO:~(master⚡) » cd ~/.oh-my-zsh
+inomoto@YOSHIO:~/.oh-my-zsh(master⚡) »git status          e
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in wor
+king directory)                                            
+
+        modified:   themes/dpoggi.zsh-theme
+
+no changes added to commit (use "git add" and/or "git commit
+ -a")                                                      
+inomoto@YOSHIO:~/.oh-my-zsh(master⚡) » git add .
+inomoto@YOSHIO:~/.oh-my-zsh(master⚡) » git commit -m "change themes"
+[master 5c5152e] change themes
+ 1 file changed, 1 insertion(+)
+inomoto@YOSHIO:~/.oh-my-zsh(master○) » 
+inomoto@YOSHIO:~/.oh-my-zsh(master○) » 
+inomoto@YOSHIO:~/.oh-my-zsh(master○) » upgrade_oh_my_zsh
+Updating Oh My Zsh                                      
+remote: Counting objects: 325, done.
+remote: Compressing objects: 100% (147/147), done.
+remote: Total 325 (delta 196), reused 285 (delta 156), pack-
+reused 0
+Receiving objects: 100% (325/325), 60.38 KiB | 197.00 KiB/s,
+ done.                                                     
+Resolving deltas: 100% (196/196), completed with 41 local ob
+jects.                                                     
+From https://github.com/robbyrussell/oh-my-zsh
+ * branch            master     -> FETCH_HEAD
+   2ff9560..c4981ba  master     -> origin/master
+ README.md                              |    2 +-
+ custom/themes/example.zsh-theme        |    1 +
+ lib/functions.zsh                      |    4 +-
+ lib/git.zsh                            |    8 +-
+ lib/history.zsh                        |   55 +-
+ plugins/archlinux/README.md            |   33 +-
+ plugins/archlinux/archlinux.plugin.zsh |   66 +-
+ plugins/asdf/asdf.plugin.zsh           |    5 +
+ plugins/chucknorris/LICENSE            |    2 -
+ .../chucknorris/fortunes/chucknorris   | 2545 ++++++++++--
+ plugins/django/django.plugin.zsh       |    1 +
+ plugins/docker-compose/_docker-compose |   38 +-
+ .../docker-compose.plugin.zsh          |    2 +
+ plugins/emotty/emotty.plugin.zsh       |    5 +-
+ plugins/git-prompt/gitstatus.py        |    2 +-
+ plugins/git/git.plugin.zsh             |    4 +-
+ plugins/github/_hub                    |    2 +
+ plugins/github/github.plugin.zsh       |    6 +-
+ plugins/gitignore/gitignore.plugin.zsh |    4 +-
+ plugins/gpg-agent/gpg-agent.plugin.zsh |   20 +-
+ plugins/hanami/README.md               |   32 +
+ plugins/hanami/hanami.plugin.zsh       |   19 +
+ plugins/jira/README.md                 |    1 +
+ plugins/jira/_jira                     |    2 +-
+ plugins/jira/jira.plugin.zsh           |    2 +-
+ plugins/kube-ps1/README.md             |   76 +
+ plugins/kube-ps1/kube-ps1.zsh          |  123 +
+ plugins/kubectl/kubectl.plugin.zsh     |   14 +-
+ plugins/mix-fast/mix-fast.plugin.zsh   |    2 +-
+ plugins/mix/_mix                       |    9 +
+ plugins/npm/npm.plugin.zsh             |    5 +-
+ plugins/pyenv/pyenv.plugin.zsh         |   61 +-
+ plugins/rails/_rails                   |    3 +
+ plugins/rust/_rust                     |    4 +-
+ plugins/sublime/sublime.plugin.zsh     |   17 +-
+ plugins/symfony2/symfony2.plugin.zsh   |    2 +
+ plugins/vagrant/_vagrant               |    4 +-
+ .../web-search/web-search.plugin.zsh   |    2 +
+ plugins/zsh_reload/README.md           |   23 +
+ .../zsh_reload/zsh_reload.plugin.zsh   |   19 +-
+ themes/avit.zsh-theme                  |    4 +-
+ themes/cloud.zsh-theme                 |    4 +-
+ themes/emotty.zsh-theme                |    4 +
+ themes/half-life.zsh-theme             |    2 +-
+ themes/rkj-repos.zsh-theme             |    7 +-
+ themes/steeef.zsh-theme                |    2 +-
+ tools/install.sh                       |    6 +-
+ 47 files changed, 2645 insertions(+), 609 deletions(-)
+ create mode 100644 custom/themes/example.zsh-theme
+ delete mode 100644 plugins/chucknorris/LICENSE
+ create mode 100644 plugins/hanami/README.md
+ create mode 100644 plugins/hanami/hanami.plugin.zsh
+ create mode 100644 plugins/kube-ps1/README.md
+ create mode 100644 plugins/kube-ps1/kube-ps1.zsh
+ create mode 100644 plugins/zsh_reload/README.md
+First, rewinding head to replay your work on top of it...
+Applying: change themes
+         __                                     __   
+  ____  / /_     ____ ___  __  __   ____  _____/ /_  
+ / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \ 
+/ /_/ / / / /  / / / / / / /_/ /    / /_(__  ) / / / 
+\____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/  
+                        /____/                       
+Hooray! Oh My Zsh has been updated and/or is at the current 
+version.                                                   
+To keep up on the latest news and updates, follow us on twit
+ter: https://twitter.com/ohmyzsh                           
+Get your Oh My Zsh swag at:  https://shop.planetargon.com/
+inomoto@YOSHIO:~/.oh-my-zsh(master○) » 
+inomoto@YOSHIO:~/.oh-my-zsh(master○) » git commit -m "changt
+inomoto@YOSHIO:~/.oh-my-zsh(master○) » cd                           
+inomoto@YOSHIO:~(master⚡) » emacs -version               
+GNU Emacs 25.1.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+GNU Emacs comes with ABSOLUTELY NO WARRANTY.
+You may redistribute copies of GNU Emacs
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING.
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » zsh_stats
+     1  86  31.8519%   cd
+     2  25  9.25926%   vim
+     3  13  4.81481%   git
+     4  12  4.44444%   npm
+     5  10  3.7037%    mkdir
+     6  10  3.7037%    echo
+     7  9   3.33333%   node
+     8  7   2.59259%   emacs
+     9  6   2.22222%   ls
+    10  5   1.85185%   brew
+    11  4   1.48148%   vi
+    12  4   1.48148%   nvm
+    13  4   1.48148%   curl
+    14  3   1.11111%   source
+    15  3   1.11111%   $
+    16  2   0.740741%  touch
+    17  2   0.740741%  tic
+    18  2   0.740741%  sudo
+    19  2   0.740741%  sh
+    20  2   0.740741%  open
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » take ~/Desktop/tetsuyaI/
+inomoto@YOSHIO:~/Desktop/tetsuyaI(master⚡) » 
+inomoto@YOSHIO:~/Desktop/tetsuyaI(master⚡) » 
+inomoto@YOSHIO:~/Desktop/tetsuyaI(master⚡) »ls -a          
+.  ..                                             
+inomoto@YOSHIO:~/Desktop/tetsuyaI(master⚡) »cd            
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » uname -n                     
+YOSHIO.local
+inomoto@YOSHIO:~(master⚡) » echo "$PS1"                  
+%{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[cyan]%}%m\
+%{$reset_color%}:%{$fg[magenta]%}%~\
+$(git_prompt_info) \
+%{$fg[red]%}%(!.#.»)%{$reset_color%} 
+inomoto@YOSHIO:~(master⚡) » pwd                          
+/Users/inomoto
+inomoto@YOSHIO:~(master⚡) » whoami                       
+inomoto
+inomoto@YOSHIO:~(master⚡) » echo $SHELL                  
+/usr/local/bin/zsh
+inomoto@YOSHIO:~(master⚡) » cat -l                       
+cat: illegal option -- l
+usage: cat [-benstuv] [file ...]
+inomoto@YOSHIO:~(master⚡) »node -v                               1 ↵
+v6.10.2
+inomoto@YOSHIO:~(master⚡) » git log                      
+fatal: your current branch 'master' does not have any commits yet
+inomoto@YOSHIO:~(master⚡) »                                       128 ↵
+inomoto@YOSHIO:~(master⚡) »                                       128 ↵
+inomoto@YOSHIO:~(master⚡) »                                       128 ↵
+inomoto@YOSHIO:~(master⚡) »                                       128 ↵
+inomoto@YOSHIO:~(master⚡) »                                       128 ↵
+inomoto@YOSHIO:~(master⚡) »                                       128 ↵
+inomoto@YOSHIO:~(master⚡) »                                       128 ↵
+inomoto@YOSHIO:~(master⚡) »                                       128 ↵
+inomoto@YOSHIO:~(master⚡) »                                       128 ↵
+inomoto@YOSHIO:~(master⚡) »zsh_stats                              128 ↵
+     1  86  31.7343%   cd
+     2  25  9.22509%   vim
+     3  13  4.79705%   git
+     4  12  4.42804%   npm
+     5  10  3.69004%   mkdir
+     6  10  3.69004%   echo
+     7  9   3.32103%   node
+     8  7   2.58303%   emacs
+     9  6   2.21402%   ls
+    10  5   1.84502%   brew
+    11  4   1.47601%   vi
+    12  4   1.47601%   nvm
+    13  4   1.47601%   curl
+    14  3   1.10701%   source
+    15  3   1.10701%   $
+    16  2   0.738007%  touch
+    17  2   0.738007%  tic
+    18  2   0.738007%  sudo
+    19  2   0.738007%  sh
+    20  2   0.738007%  open
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » uname -n   
+YOSHIO.local
+inomoto@YOSHIO:~(master⚡) »                              
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » git log  
+fatal: your current branch 'master' does not have any commits yet
+inomoto@YOSHIO:~(master⚡) »node -v                                128 ↵
+v6.10.2
+inomoto@YOSHIO:~(master⚡) » echo $SHELL
+/usr/local/bin/zsh
+inomoto@YOSHIO:~(master⚡) » echo "$PS1"
+%{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[cyan]%}%m\
+%{$reset_color%}:%{$fg[magenta]%}%~\
+$(git_prompt_info) \
+%{$fg[red]%}%(!.#.»)%{$reset_color%} 
+inomoto@YOSHIO:~(master⚡) » emacs -version          
+GNU Emacs 25.1.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+GNU Emacs comes with ABSOLUTELY NO WARRANTY.
+You may redistribute copies of GNU Emacs
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING.
+inomoto@YOSHIO:~(master⚡) » 
+                                                                        
+inomoto@YOSHIO:~(master⚡) » 
+                                                                        
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+                                                                        
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » emacs -version
+GNU Emacs 25.1.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+GNU Emacs comes with ABSOLUTELY NO WARRANTY.
+You may redistribute copies of GNU Emacs
+under the terms of the GNU General Public License.
+For more information about v                                 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » zsh_stats               
+     1  86  31.7343%   cd
+     2  25  9.22509%   vim
+     3  13  4.79705%   git
+     4  12  4.42804%   npm
+     5  10  3.69004%   mkdir
+     6  10  3.69004%   echo
+     7  9   3.32103%   node
+     8  7   2.58303%   emacs
+     9  6   2.21402%   ls
+    10  5   1.84502%   brew
+    11  4   1.47601%   vi
+    12  4   1.47601%   nvm
+    13  4   1.47601%   curl
+    14  3   1.10701%   source
+    15  3   1.10701%   $
+    16  2   0.738007%  touch
+    17  2   0.738007%  tic
+    18  2   0.738007%  sudo
+    19  2   0.738007%  sh
+    20  2   0.738007%  open
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 

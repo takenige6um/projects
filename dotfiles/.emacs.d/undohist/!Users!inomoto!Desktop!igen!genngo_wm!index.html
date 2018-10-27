@@ -1,0 +1,109 @@
+
+((digest . "db930e349032134d803b82d408d534cd") (undo-list nil ("強" . -3086) ((marker . 3086) . -1) ("い" . -3087) ((marker . 3086) . -1) ("菌" . -3088) ((marker . 3086) . -1) 3089 nil (3060 . 3089) nil ("</script>
+</body>
+</html>
+強い菌" . -3060) ((marker . 3060) . -29) ((marker . 3086) . -29) ((marker . 3060) . -26) ((marker . 3060) . -29) 3089 nil ("１" . -3089) ((marker . 3086) . -1) 3090 nil (3089 . 3090) nil (3086 . 3089) nil ("強い菌" . -3086) ((marker . 3086) . -3) (3086 . 3089) ("強いきn" . -3086) ((marker . 3086) . -4) (3086 . 3090) ("強いき" . -3086) ((marker . 3086) . -3) (3086 . 3089) ("強いk" . -3086) ((marker . 3086) . -3) (3086 . 3089) ("強い" . -3086) ((marker . 3086) . -2) (3086 . 3088) ("つよ" . -3086) ((marker . 3086) . -2) (3086 . 3088) ("つy" . -3086) ((marker . 3086) . -2) (3086 . 3088) ("つ" . -3086) ((marker . 3086) . -1) (3086 . 3087) ("t" . -3086) ((marker . 3086) . -1) (3086 . 3087) nil ("b" . -3086) ((marker . 3060) . -1) ((marker . 3086) . -1) ((marker . 3060) . -1) ("a" . -3087) ((marker . 3060) . -1) ((marker . 3086) . -1) ((marker . 3060) . -1) ("b" . -3088) ((marker . 3060) . -1) ((marker . 3086) . -1) ((marker . 3060) . -1) ("y" . -3089) ((marker . 3060) . -1) ((marker . 3086) . -1) ((marker . 3060) . -1) ("m" . -3090) ((marker . 3060) . -1) ((marker . 3086) . -1) ((marker . 3060) . -1) ("e" . -3091) ((marker . 3060) . -1) ((marker . 3086) . -1) ((marker . 3060) . -1) ("t" . -3092) ((marker . 3060) . -1) ((marker . 3086) . -1) ((marker . 3060) . -1) ("a" . -3093) ((marker . 3060) . -1) ((marker . 3086) . -1) ((marker . 3060) . -1) ("l" . -3094) ((marker . 3060) . -1) ((marker . 3086) . -1) ((marker . 3060) . -1) 3095 nil (3086 . 3095) nil ("c" . -3086) ((marker . 3060) . -1) ((marker . 3086) . -1) ("h" . -3087) ((marker . 3060) . -1) ((marker . 3086) . -1) ("e" . -3088) ((marker . 3060) . -1) ((marker . 3086) . -1) ("e" . -3089) ((marker . 3060) . -1) ((marker . 3086) . -1) ("s" . -3090) ((marker . 3060) . -1) ((marker . 3086) . -1) ("e" . -3091) ((marker . 3060) . -1) ((marker . 3086) . -1) ("c" . -3092) ((marker . 3060) . -1) ((marker . 3086) . -1) ("a" . -3093) ((marker . 3060) . -1) ((marker . 3086) . -1) ("k" . -3094) ((marker . 3060) . -1) ((marker . 3086) . -1) ("e" . -3095) ((marker . 3060) . -1) ((marker . 3086) . -1) 3096 nil (3092 . 3096) nil (3086 . 3092) nil ("s" . -3086) ((marker . 3086) . -1) 3087 nil (3086 . 3087) (t 23389 48205 858511 622000) nil ("
+" . -3069) 3070 nil (446 . 3070) nil (445 . 446) nil ("<script>
+const x = 1
+const y = 2
+const z = x + y
+console.log(z)
+
+document.getElementById('タイトル').style.background = 'red'
+document.getElementById('ほげ').style.background = 'blue'
+document.getElementById('ふが').style.background = 'red'
+document.getElementById('ぴよ').style.background = 'blue'
+
+// window.setTimeout(clock,3000);
+// function clock() {  
+//   ぴよ.animate([
+//     { transform: 'rotate(0deg)' },
+//     { transform: 'rotate(360deg)' },
+//   ], {
+//     easing: 'cubic-bezier(.06,.82,.92,.56)',
+//     duration: 1000,
+//     fill: 'both'
+//   })  
+// }
+
+setTimeout(() => {
+  ぴよ.animate([
+    { transform: 'rotate(0deg)' },
+    { transform: 'rotate(360deg)' },
+  ], {
+    easing: 'cubic-bezier(.06,.82,.92,.56)',
+    duration: 1000,
+    // fill: 'both'
+  })  
+}, 3000)
+
+function mkhanabi() {
+  const left = Math.random() * window.innerWidth
+  const top = Math.random() * window.innerHeight
+  const color = 'hsl(' + Math.floor(Math.random() * 360) + ', 50%, 50%)'
+
+  for (let i = 0; i < 15; i++) {
+    const ball = document.createElement('ball')
+    ball.style.cssText = 'position:absolute; width:10px; height:10px; border-radius:100%;'
+    ball.style.background = color
+    ball.style.boxShadow = '0 0 4px 4px' + color
+    ball.style.left = left + 'px'
+    ball.style.top = top + 'px'
+    ball.animate([
+      // {transform: 'rotate(' + 360 / 20 * i + 'deg) translate3d(0, 0, 0)', opacity: 1},
+      // {transform: 'rotate(' + 360 / 20 * i + 'deg) translate3d(100px, 0, 0)', opacity: 0},
+      {transform: 'rotate(' + 360 / 15 * i + 'deg) translate3d(0, 0, 0)', opacity: 1},
+      {transform: 'rotate(' + 360 / 15 * i + 'deg) translate3d(150px, 0, 0)', opacity: 0},
+    ],{
+      duration: 2000,
+      fill: 'both',
+    }).addEventListener('finish', () => {
+      ball.parentNode.removeChild(ball)
+    })
+    document.body.appendChild(ball)
+  }
+}
+mkhanabi()
+mkhanabi()
+mkhanabi()
+
+function ame() {
+  requestAnimationFrame(ame)
+  const drop = document.createElement('drop')
+  drop.style.cssText = 'position:absolute; width:2px; box-shadow:0 0 2px #339; height:3px; background:#339;'
+  // drop.style.cssText = 'position:absolute; width:2px; height:3px; background:#339;'
+  drop.style.left = Math.random() * window.innerWidth + 'px'
+  drop.animate([
+    {transform: 'translate3d(0, 0, 0)'},
+    {transform: 'translate3d(0, ' + window.innerHeight + 'px, 0)'},
+  ],{
+    duration: 1000,
+    fill: 'both',
+  }).addEventListener('finish', () => {
+    drop.parentNode.removeChild(drop)
+  })
+  document.body.appendChild(drop)
+}
+ame()
+
+setInterval(() => {
+  mkhanabi()
+  mkhanabi()
+  mkhanabi()
+  mkhanabi()
+}, 1000)
+
+</script>
+" . 176) 2800 (t 23389 47858 83572 355000) nil ("
+" . 176) nil (176 . 177) (t 23389 47858 83572 355000) nil ("
+" . -2789) ("
+" . -2790) ("
+" . -2791) ("
+" . -2792) 2793 nil ("  " . -758) (185 . 2795) nil (184 . 185) nil (184 . 185) nil (176 . 193) ("script" . -176) 182 nil (176 . 182) ("sc" . -176) 178 nil (176 . 178) nil (175 . 176) nil ("<!-- <\\!-- The core React library -\\-> -->
+<!-- <script src=\"http://fb.me/react-0.12.1.js\"></script> -->
+<!-- <\\!-- In-browser JSX transformer, remove when pre-compiling JSX. -\\-> -->
+<!-- <script src=\"http://fb.me/JSXTransformer-0.12.1.js\"></script> -->
+
+<!-- <script type=\"text/jsx\" src=\"app.js\"></script> -->
+<script src=\"app.js\"></script>
+" . 446) 758 nil ("  " . -789) ("    " . -758) ("    " . -424) ("    " . -402) ("    " . -380) ("    " . -343) ("    " . -296) ("  " . -289) ("  " . -281) ("    " . -272) ("      " . -270) ("    " . -252) ("      " . -243) ("      " . -241) ("    " . -217) ("    " . -203) ("    " . -190) ("      " . -184) ("    " . -176) ("    " . -108) ("    " . -54) ("    " . -31) ("  " . -24) (1 . 897) (t . -1)))

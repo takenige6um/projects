@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: ruby
+# key: ruby
+# --
+<p>私は、<ruby>
+    東 <rp>(</rp> <rt>とう</rt> <rp>)</rp>
+    京 <rp>(</rp> <rt>きょう</rt> <rp>)</rp>
+  </ruby>に住んでいます。</p>
+<p>あした、<ruby>
+    渋谷 <rp>(</rp> <rt>しぶや</rt> <rp>)</rp>
+</ruby>に遊びに行きます。</p>

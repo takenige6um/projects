@@ -1,0 +1,3 @@
+= YouTube Data API (v3) 
+[2017-10-10 21:07] >>> ~/projects/dotfiles/.emacs.d/init.el
+APIキー: AIzaSyCjEDLjOjk3FEd0rKnaCmpKdL5-BZbyDCs

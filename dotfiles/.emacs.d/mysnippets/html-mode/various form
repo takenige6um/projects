@@ -1,0 +1,59 @@
+# -*- mode: snippet -*-
+# name: various form
+# key: formla
+# --
+<h1>入力フォームのいろいろ</h1>
+<form method="post" action="${1:action}.php">
+<div>
+<p>氏名:<input type="text" name="${2:form1}" size="${3:20}" maxlength="${4:20}"></p>
+</div>
+
+<div>
+<p>性別:
+<input type="radio" name="${5:form2}" value="${6:man}">${7:男}
+<input type="radio" name="${8:form2}" value="${9:woman}">${10:女}
+</p>
+</div>
+
+<div>
+<p>年齢層:
+<input type="radio" name="form3" value="${11:young}" id="${12:young}"><label for="${13:young}">${14:若年}</label>
+<input type="radio" name="form3" value="${15:adult}" id="${16:adult}"><label for="${17:adult}">${18:青年}</label>
+</p>
+</div>
+
+<div>
+<p>アンケート:
+<input type="checkbox" name="form4" value="${19:dog}">${20:犬が好き}
+<input type="checkbox" name="form4" value="${21:cat}">${22:猫が好き}
+<input type="checkbox" name="form4" value="${23:fox}">${24:狐が好き}
+</p>
+</div>
+
+<div>
+<p>${25:申込月}
+<select name="form5">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5" selected>5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+</p>
+</div>
+
+<div>
+<p>${26:感想}<br>
+<textarea cols="${27:40}" name="form6" rows="${28:5}"></textarea>
+</p>
+<input type="submit" value="${29:送信する}">
+<input type="reset" value="${30:リセット}">
+</div>
+</form>

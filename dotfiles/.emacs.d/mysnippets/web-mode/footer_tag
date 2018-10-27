@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: footer_tag
+# key: fo
+# binding: C-c M-l
+# コメント例
+# これはfooterタグです。
+# --
+<footer>
+ $0
+</footer>

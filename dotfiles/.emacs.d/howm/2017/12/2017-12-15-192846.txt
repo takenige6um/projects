@@ -1,0 +1,717 @@
+= commandを整理する
+[2017-12-15 19:28] >>> ~/.emacs.d/init.el
+
+   ---------------------------
+
+   C-x ?                 help-command
+
+   C-x ? a 文字列 RET     コマンドのリストを表示
+
+   C-x ? b               現在のキーの割り当て表
+
+   C-x ? k キーバインド    コマンド名とそのドキュメント
+
+   C-x ? w コマンド名 RET
+                          入力したコマンドを実行するキー
+
+   C-x ? f 関数名 RET      その関数の説明
+
+   C-x ? v 変数名 RET      入力した変数の説明
+
+   ---------------------------
+   M-<       バッファ先頭へ
+   M->       バッファ末尾へ
+
+
+   C-f       進む
+   C-b       戻る
+
+
+   C-p       上へ
+   C-n       下へ
+
+
+   C-a       行頭へ
+   C-e       行末へ
+
+
+   M-a       文頭へ移動
+   M-e       文末へ移動
+
+
+   M-f       一単語次へ
+   M-b       一単語前へ
+
+
+   M-v       上へスクロール
+   C-v       下へスクロール
+
+
+   C-l       カーソルを中央へ
+
+
+   M-{       段落頭       段落単位での移動
+   M-}       段落末 
+
+
+   C-x [    前ページ     ページ単位での移動
+   C-x ]    次ページ
+
+
+   M-r       画面の中央左端に移動
+
+
+   M-g g     行番号へ
+
+
+
+   ---------------------------
+   C-h       Back space (DEL)
+
+   C-d       delete-char
+   
+   C-k       カーソルから行末まで切り取り (C-a C-k)
+
+   -----------------------------
+
+   C-g       中断、取り消し、コマンド取りやめ
+
+   C-/       元に戻す、やり直し、undo
+
+   C-.       redo
+
+
+
+       C-x u     (undo-tree-visualize)
+   
+             ;; ;;  樹形図を移動するとバッファがアンドゥされていく
+             ;; ;; "t" 樹形図を時間表示
+             ;; ;; 戻りたいポイントに来たら"q"で抜ける
+      
+
+   ------------------------------
+
+
+   M-[       ('point-undo)
+   M-]       ('point-redo)
+
+
+
+   C-c l     折り返しトグル
+
+
+
+   -----------------------------
+
+   C-x C-f      find-file
+
+   C-x C-s      save-buffer
+
+   C-x C-w      名前をつけてセーブ
+
+   M-! open .   Finderでいまいるディレクトリが瞬時に出てきて便利
+
+   -----------------------------
+   C-x C-c      Emacsの終了
+
+   C-c C-c      gulp終了
+
+   exit         term終了
+
+   ------------------------------
+   C-x [Return] f     文字コード(S.E.U)
+                      改行コード(dos.mac.unix.\)
+   ------------------------------
+   C-x h       mark whole buffer
+
+   C-x k       kill-buffer
+   ------------------------------
+   C-x -> , C-x <- , C-x b     buffer切り替え
+
+   C-x C-b     list-buffer (別ウインドウ)
+   ------------------------------
+   C-x 2       split-window-below
+
+   C-x 1       delete-other-window
+
+   C-x 0       delete-window
+
+
+   C-x o , C-t      other-window
+
+   C-M-v       scroll-other-window
+
+
+   ------------------------------
+   C-@         範囲指定、mark
+
+   C-M-SPC     mark-sexp
+
+   M-h         段落
+
+   -------------------------------
+
+   C-w         cut
+
+   M-w         copy
+
+   C-y         貼り付け、yank
+
+   M-y         yank-pop
+
+
+   M-k         行コピー
+
+   M-K         行キル
+
+   M-@         単語マーク
+
+
+
+   M-c         行、範囲の複製
+
+
+   -------------------------------------
+
+   C-[Return]    矩形処理
+   
+   -------------------------------------
+
+   M-;            comment
+
+   -------------------------------------
+
+   M-y            anything-show-kill-ring
+
+
+
+   Command + f    anything-for-files
+
+   Command + d    anything-for-document
+
+   M-t            anything-for-tags
+   
+
+   C-M-o          anything-c-moccur-occur-by-moccur
+
+   M-o            occur-by-moccur
+
+
+
+   ====================================
+
+   C-m            Enter,Return
+
+   ====================================
+   
+
+   [TAB]          インデント
+   
+   C-<f8>         バッファ全体をインデント
+
+
+   ---------------------------------
+
+
+   スニペット
+
+
+      [TAB],C-i      snippet
+                     (yas-trigger-key "TAB")
+
+       C-c C-s       web-mode-snippet-insert
+
+
+          M-x yas-describe-tables    テンプレートの表示
+
+
+       C-x i i        既存スニペットを挿入する
+       (define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
+   
+       C-x i n        新規スニペットを作成するバッファを用意する
+       (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
+   
+       C-x i v        既存スニペットを閲覧・編集する
+       (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+
+   -----------------------------------
+
+
+   C-j            emmet
+
+          M-x emmet-mode      Enable the minor mode
+
+
+   -----------------------------------
+
+   C-c m          multi-term
+
+          (global-set-key (kbd "C-c n") 'multi-term-next)
+          (global-set-key (kbd "C-c p") 'multi-term-prev)
+
+
+   -------------------------------
+
+   M-!          shell-command (TAB補完あり)
+                     出力先：ミニバッファ
+
+
+              M-! date RET    現在時刻をミニバッファへ
+
+
+   C-u M-!      shell-command
+                      出力先：カレントファイル（カーソル位置）
+
+
+              C-u M-! ls -l RET
+
+
+
+   M-|          shell-command-on-region
+
+
+              C-u M-| grep "Do" RET
+
+
+   --- oh my zsh コマンド -----
+
+   zsh_stats               最近使ったコマンドの統計が見れる。
+   
+   take foo                mkdir + cdしてくれるtakeコマンド。
+   take foo/hoge
+   
+   uninstall_oh_my_zsh     oh-my-zshのアンインストール。
+   
+   upgrade_oh_my_zsh       oh-my-zshのアップデート。
+
+
+        どれも ~/.oh-my-zsh/lib/functions.zsh にありました。
+
+
+
+
+
+   -------------------------------
+
+
+   M-x compile
+
+
+
+   M-x customize ~
+
+
+
+   M-x list-packages
+
+       list-packages’ with M-x l-pac RET
+
+        packageからinstall
+
+
+
+
+        h          ミニバッファに操作ヘルプを表示する
+        p          前の行
+        n          次の行
+        ?, RET     パッケージの説明を取得する
+        i          インストール候補としてマークする
+        U          アップデート可能なパッケージをすべてマークする
+        d          削除候補としてマークする
+        DEL        １行上のマークを外す
+        u          現在行のマークを外す
+        x          マークしたパッケージをインストール / 削除する
+        r          パッケージ一覧をリフレッシュする
+        q          ウィンドウを閉じる
+        
+
+
+
+
+
+
+         -> M-x package-initializeするとすぐに利用できる
+
+            M-x p-ini RET    package-initialize
+
+
+
+
+
+   -----------------------------------
+
+   ディレクトリ操作  Dired
+   
+   
+   
+      C-x d (dired)   dired bufferが開く
+   
+   
+   
+      n, SPC          次の行へ
+      p               前の行へ
+      RET, f          現在行のファイルを開く
+      d               削除候補としてマークする
+      x               マークしたファイルを削除する
+      m               マークする
+      *%              正規表現でマークする
+      <backspace>     1行上のマークを外す
+      u               現在行のマークを外す
+      *!              マークをすべて外す
+      +               ディレクトリを作成する
+      C-_             操作を１つ戻す
+      D               指定したファイルを削除する
+      R               指定したファイル名を変更する
+      C               指定したファイルをコピーする
+      q               ウィンドウを閉じる
+
+
+
+
+   ========================================
+
+   C-r         上にインクリメンタルサーチ
+
+   C-s         下にインクリメンタルサーチ
+
+
+   ----------------------------------------
+
+
+   M-%         query-replace
+
+       y . [space]     置換実行（ひとつ）
+       n               置換せず次へ進む
+       !               残り全ての置換を実行
+
+
+
+
+   -------------------------------------
+
+
+   Google-translate
+  
+   
+       C-M-t         翻訳する
+  
+  
+               翻訳範囲
+              
+                     Sentence  (文)          引数なし
+                     paragraph (段落)         C-u
+                     word      (単語)         C-u C-u
+                     
+                     Self-input(自力入力)      C-u C-u C-u
+                     region(リージョン)        リージョン
+
+
+
+
+
+   --------------------------------
+
+   透明度を変更するコマンド        M-x set-alpha
+
+   ------------------------------------
+
+
+   C-c,,       howm-menuを起動(メモ)
+
+
+
+   M-x dtw     行末の空白を削除
+             (defalias 'dtw 'delete-trailing-whitespace)
+
+
+   M-t         anything-for-currentを割り当て
+              (define-key global-map (kbd "M-t") 'anything-for-tags))
+
+
+
+    (require 'emoji)
+
+
+
+
+   C-M-i       auto-complete
+
+
+
+
+   -------------------------------
+
+
+   M-x about-emacs       Emacsのバージョン情報
+
+
+   M-x align             選択範囲を整列
+   M-x align-regexp
+
+
+   M-x emacs-init-time   Emacsの起動時間
+          You can run the command ‘emacs-init-time’ with M-x ema-t RET
+
+
+   M-x emacs-uptime      Emacsの連続稼働時間
+          You can run the command ‘emacs-uptime’ with M-x -upt RET
+
+
+
+   -------------------------------
+   *scratch*バッファで計算     括弧の後ろで C-j   10050
+
+   (/ (+ 100 5000 15000) 2)   = (100 + 5000 + 15000) / 2
+
+             
+   -------------------------------
+
+
+窓(ウインドウ)
+     
+     窓を開ける、閉じる
+     
+     上下方向にもう一つの窓を開く ： C-x 2
+     左右方向にもう一つの窓を開く ： C-x 3
+     上下方向にもう一つの窓を開き、別のファイルを開く ： C-x 4 f
+     上下方向にもう一つの窓を開き、別のファイルをread-only modeで開く ： C-x 4 r
+     上下方向にもう一つの窓を開き、別のバッファを表示し、カーソルも移動 ： C-x 4 b
+     上下方向にもう一つの窓を開き、別のバッファを表示し、カーソルは移動しない ： C-x 4 C-o
+     
+     カーソルのある窓を閉じる ： C-x 0
+     カーソルのある窓以外の窓を全て閉じる ： C-x 1
+     
+     
+     窓間のカーソル移動
+     
+     隣の窓へカーソル移動 ： C-x o
+     
+     
+     窓のサイズ調整
+     
+     窓を上下方向に大きくする ： C-x ^
+     窓を左右方向に小さくする ： C-x {
+     窓を左右方向に大きくする ： C-x }
+     
+     
+     フレーム
+     
+     
+     
+     フレームを開ける、閉じる
+     
+     
+     もう一つのフレームを開く ： C-x 5 2
+     もう一つのフレームを開き、別のファイルを開く ： C-x 5 f
+     もう一つのフレームを開き、別のファイルをread-only modeで開く ： C-x 5 r
+     もう一つのフレームを開き、別のバッファを表示し、カーソルも移動 ： C-x 5 b
+     もう一つのフレームを開き、別のバッファを表示し、カーソルは移動しない ： C-x 5 C-o
+     
+     カーソルのあるフレームを閉じる ： C-x 5 0
+     カーソルのあるフレーム以外のフレームを全て閉じる ： C-x 5 1
+     
+     
+     フレーム間のカーソル移動
+     
+     隣のフレームへカーソル移動 ： C-x 5 o
+     
+     
+     ブックマーク(bookmark)
+     
+     ブックマークをいれる ： C-x r m
+     ブックマークを開く ： C-x r b
+
+
+
+   ---------------------------------
+
+
+      M-yにanything-show-kill-ringを割り当てる
+      
+      C-M-oにanything-c-moccur-occur-by-moccurを割り当てる
+      
+      M-oにoccur-by-moccurを割り当て
+      
+      
+      ;; "Moccur"バッファ上で r を押すことで、検索結果を直接編集できるmoccur-edit-modeになる
+      ;; C-c C-u, C-x k, C-u C-k (moccur-edit-kill-all-change 編集を破棄)
+      ;; C-c C-c  or  C-x C-s  編集内容がバッファへと反映されます
+      ;; 編集をファイルに反映させるには C-x s(save-some-buffers)などを利用して保存
+      
+      
+      
+      ;; M-x grep, M-x rgrep, M-x lgrep で検索
+      ;; C-c C-p "grep"バッファを編集
+      ;; C-c C-k  編集を破棄
+      ;; C-c C-c  編集を反映
+      ;; ファイルは要別途保存
+      ;;  M-x wgrep-save-all-buffers RET  wgrepによって編集したファイルのみ一括保存する
+      
+      
+      
+   ------------------------------
+
+   Emacs起動 --> C-x C-f --> ~/.emacs.d/ --> init.el
+                        --> M-x eval-buffer [return]
+                        
+            M-x ev-b RET   ‘eval-buffer’
+            M-x ev-r RET   ‘eval-region’
+   
+   
+   
+   ;; ¥の代わりにバックスラッシュを入力する
+   ;; (define-key global-map [?¥] [?\\])
+   ;; 165が¥（円マーク） , 92が\（バックスラッシュ）を表す
+   (define-key global-map [165] [92])
+
+
+
+
+   -------------------------------------
+
+
+   Elscreen
+  
+       C-z c     create screen
+       
+       C-z C     clone screen
+       
+       C-z k     kill screen
+       
+       C-z M-k   kill screen and buffers
+       
+       C-z K     kill other screen
+       
+       C-z n     next screen
+       
+       C-z p     previous screen
+       
+       C-z a     toggle screen
+       
+       C-z i     display screen number
+       
+       C-z T     display tab
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 7.6 差分とマージ                                         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; M-x diff RET ~/tmp/example.txt RET ~/tmp/example.txt.old RET (差分表示)
+
+;;M-x ediff RET ~/tmp/example.txt.old RET ~/tmp/example.txt RET (差分視覚的表示)
+
+;;; P206 同一フレーム内にコントロールパネルを表示する
+;; ediffコントロールパネルを別フレームにしない
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+;; n,p で差分移動  | でウィンドウ分割切り替え  wd で差分ファイルに出力(パッチを作成)
+
+
+;; Ediffによるパッチの適用  M-x epatch
+
+;; Ediffによるマージ  M-x ediff-merge
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 7.7 Emacsからデータベースを操作                            ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; M-x sql-データベース名 (Emacsからデータベースへ接続)
+
+;; example.sqlというファイルを作成し
+;; M-x sql-set-sqli-buffer-generallyを実行
+;; *SQLi*バッファと関連づけられる
+;; example.sqlファイルに show tables;と記述し C-c C-cをタイプ
+;; example.sqlに記述したSQL文が*SQLi*バッファ上で実行されます
+
+
+
+;;; P210-211 MySQLへ接続する──sql-interactive-mode
+;; SQLサーバへ接続するためのデフォルト情報
+;; (setq sql-user "root" ; デフォルトユーザ名
+;;       sql-database "database_name" ;  データベース名
+;;       sql-server "localhost" ; ホスト名
+;;       sql-product 'mysql) ; データベースの種類
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 7.8 バージョン管理                                        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Emacs標準搭載バージョン管理システム用インターフェース VC
+;; P.214
+
+
+;; ▼要拡張機能インストール▼
+;;; P215-216 Subversionフロントエンド psvn
+(when (executable-find "svn")
+  (setq svn-status-verbose nil)
+  (autoload 'svn-status "psvn" "Run `svn status'." t))
+
+;; M-x svn-status   RET
+;; n,pでファイル移動、aでファイルを追加、mでマーク、uでアンマーク、cでコミットメッセージの入力バッファとなり、C-c C-c でコミット完了
+;; U で svn up を実行  P.217
+
+;; ▼要拡張機能インストール▼
+;;; P217-219 Gitフロントエンド Egg
+;; GitフロントエンドEggの設定
+(when (executable-find "git")
+  (require 'egg nil t))
+
+;; C-x v s (egg-status)
+
+;; n,p ファイル、差分単位でジャンプ  カーソル+s で、ステージ、アンステージ
+;; ステージ済みのファイルをコミット c コミットメッセージを入力して C-c C-c でコミット完了
+;; C-x v l (egg-log)
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 7.10 TRAMPによるサーバ接続                  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; C-x C-f (find-file) から  /sshx:ユーザ名@ホスト名:  と入力でそのままサーバに接続
+
+;; C-x C-f  から   /su: 、もしくは  /sudo:  でファイルを開いて編集
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 7.11 ドキュメント閲覧・検索                   ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; M-x man
+
+
+;; M-x woman RET コマンド名 RET
+
+;; M-p (WoMan-previous-manpage)  M-n  (WoMan-next-manpage)
+
+------------------------------
+
+;; C-u M-x woman RET  でキャッシュを更新できる
+
+
+
+;; Command+d に  M-x anything-for-document を割り当て
+(define-key global-map (kbd "s-d") 'anything-for-document)
+
+
+
+;; Mac の Command + f で anything-for-files
+(define-key global-map (kbd "s-f") 'anything-for-files)
+
+
+
+;; C-<f8> でバッファ全体をインデント
+(define-key global-map (kbd "C-<f8>") 'indent-whole-buffer)

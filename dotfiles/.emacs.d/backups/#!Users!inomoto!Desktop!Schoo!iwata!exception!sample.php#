@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>例外処理</title>
+	<meta charset="UTF8">
+</head>
+<body>
+<?php
+/*
+    ■ Lesson1 例外処理とは？
+    予期しない結果が発生した場合に行う処理の事で、エラーの対処が簡単になります。
+    例えばDBに上手く繋がらなかった場合などに使います。
+    http://php.net/manual/ja/language.exceptions.php
+*/
+/*
+    // 例: 例外処理なし
+    $dbh = new PDO('mysql:host=localhost;dbname=test', 'dbuser_sql_test', 'dbpass_sql_test');
+    $sql = "select * from users";
+    $stmt = ($dbh->query($sql));
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo '後続の処理を実施';
+*/
+/*
+     // 例: 例外処理あり
+    try {
+        $dbh = new PDO('mysql:host=localhost;dbname=test', 'dbuser_sql_test', 'dbpass_sql_test');
+        $sql = "select * from users";
+        $stmt = ($dbh->query($sql));
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        var_dump($e->getMessage());
+        echo 'DBに上手く接続することができませんでした。';
+    }
+    echo '後続の処理を実施';
+*/
+/*
+    ■ Lesson2 例外処理の基本的な書き方
+    基本は try { 例外が発生しうる処理 } catch (Exception $e) { 例外処理 }
+*/
+/*
+    function inverse($x) {
+        if (!$x) {
+            throw new Exception('ゼロによる除算。');
+        }
+        return 1/$x;
+    }
+ 
+    try {
+        echo inverse(5) . "\n";
+        echo inverse(0) . "\n";
+    } catch (Exception $e) {
+        echo '捕捉した例外: ',  $e->getMessage(), "\n";
+    }
+    // 実行は継続される
+    echo "次の処理へ\n";
+*/
+/* 
+    ■ Lesson3 例外毎に例外処理を分ける
+    catchでExceptionを指定すると、全ての例外がキャッチされます。
+    エラーごとに例外処理を分けたい場合は、Exceptionの種類ごとにcatchを指定します。
+    また、オリジナルのExceptionを作ることも出来ます。
+    参考: 例外を拡張する http://php.net/manual/ja/language.exceptions.extending.php
+*/
+/*
+    try {
+        $dbh = new PDO('mysql:host=localhost;dbname=test', 'dbuser_sql_test', 'dbpass_sql_test');
+        $sql = "select * from users";
+        $stmt = ($dbh->query($sql));
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        var_dump($e->getMessage());
+        echo 'PDOException: DBに上手く接続することができませんでした。';
+        exit;
+    } catch (Exception $e) {
+        var_dump($e->getMessage());
+        echo 'Exception: 例外が発生しました。';
+        exit;
+    }
+    
+*/
+
+?>
+</body>
+</html>

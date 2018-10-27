@@ -1,0 +1,74 @@
+/* style.css */
+
+body {
+    width: 100%;
+    min-width: 960px;
+    background-color: #fff;
+}
+
+div.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 64px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+header nav ul {
+    overflow: hidden;
+    width: 270px;
+    margin: 0 auto 20px;
+}
+
+header nav li {
+    float: left;
+    width: 80px;
+    margin: 0 5px;
+}
+
+section {
+    text-align: center;
+}
+
+section h1 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+ul.photo_image{
+    width: 680px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+}
+
+ul.photo_image li{
+    width:150px;
+    word-wrap:break-word;
+    float: left;
+    margin: 0 10px;
+}
+
+img.bg_image {
+    width: 100%;
+}
+
+dl.contact_list {
+    margin-bottom: 40px;
+}
+
+footer {
+    padding-top: 40px;
+    padding-bottom: 120px;
+    text-align: center;
+    background-color: #eee;
+}

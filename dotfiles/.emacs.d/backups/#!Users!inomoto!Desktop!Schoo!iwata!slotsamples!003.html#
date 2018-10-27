@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>スロットアプリ</title>
+        <style>
+            .slot {
+                float: left;
+                width: 150px;
+                text-align: center;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>間違えたら即終了！ 無限スロット！</h1>
+        <p>現在の得点:<span id="score">0</span></p>
+        <div class="slot">
+            <div id="slot0">0</div>
+            <input type="button" value="STOP" id="stop0">
+        </div>
+        <div class="slot">
+            <div id="slot1">0</div>
+            <input type="button" value="STOP" id="stop1">
+        </div>
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+          </head>
+          <body>
+           
+          </body>
+        </html>
+
+        <script>
+            (function() {
+
+                /* ブラウザが読み込まれたタイミングで実行される処理 */
+                // 変数の初期化
+                var score     = 0    // スコア
+                var interval  = 500; // スロットの更新間隔(ms)
+                var timers    = [];  // 各スロット回転用のタイマー格納
+                var results   = [];  // 各スロット停止時の値を格納
+                var stopCount = 0;   // スロットの停止台数
+
+                // イベント登録
+                document.getElementById('stop0').onclick = function () {
+                    stopSlot(0);
+                };
+                document.getElementById('stop1').onclick = function () {
+                    stopSlot(1);
+                };
+
+                // スロット開始
+                startSlot();
+
+                /* 関数群 */
+                // 全てのスロットをスタートさせる
+                function startSlot() {
+                    // 初期化
+                    stopCount = 0;
+                    timers    = [];
+                    results   = [];
+                    // スロット回転開始
+                    runSlot(0);
+                    runSlot(1);
+                }
+
+                // 各スロットの値を0~9で変化させる
+                function runSlot(num) {
+                    var slotValue = document.getElementById('slot' + num);
+                    if (slotValue.innerHTML < 9) {
+                        slotValue.innerHTML ++;
+                        } else {
+                        slotValue.innerHTML = 0;
+                    }
+
+                    // 自分自身(runSlot)を呼び出して、処理を繰り返す
+                    timers[num] = setTimeout(function() {
+                        runSlot(num);
+                    }, interval);
+                }
+
+                // 各スロットを止める
+                function stopSlot(num) {
+                    // 既に停止している場合は無視
+                    if (typeof results[num] !== "undefined") {
+                        return;
+                    }
+
+                    // 繰り返し処理のタイマーを停止してスロット停止
+                    clearTimeout(timers[num]);
+                    results[num] = document.getElementById('slot' + num).innerHTML;
+
+                    // 全てのスロットが止まっていたら結果を取得
+                    stopCount++;
+                    if (stopCount == 2) {
+                        checkResult();
+                    }
+                }
+
+                // 結果を取得する
+                function checkResult(){
+
+                    // スロットが揃ったかチェックする
+                    if (results[0] == results[1]) {
+                        alert("Excellent!");
+                        interval *= 0.8;
+                        score += 1000 / interval;
+                        updateScore();
+                        startSlot();
+                        } else {
+                        gameover();
+                    }
+                }
+                // スコアの表示を更新
+                function updateScore() {
+                    target = document.getElementById("score");
+                    target.innerHTML = score;
+                }
+
+                // ゲームオーバーの処理をする
+                function gameover(){
+                    alert("GAME OVER!");
+                    getTweetBtn();
+                }
+
+                // twitterボタンの有効化
+                function getTweetBtn() {
+                    var tweetBtn = document.createElement("p");
+                    tweetBtn.innerHTML = '結果をTweetしてね!<br><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://schoo.jp/class/1908" data-text="貴方の得点は『' + score + '』でした。【オンライン動画学習サイト schoo-WEB-campus】『JavaScript実践 〜スロットアプリの制作』" data-size="large" data-count="none" data-hashtags="schoo_slot">結果</a>';
+
+                    var h1 = document.getElementsByTagName("h1")[0];
+                    document.body.insertBefore(tweetBtn, h1);
+
+                    // Tips: !は即時関数の意味 twitterボタン設置用スクリプトから拝借
+                    // https://about.twitter.com/ja/resources/buttons
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                }
+
+            })();
+        </script>
+    </body>
+</html>

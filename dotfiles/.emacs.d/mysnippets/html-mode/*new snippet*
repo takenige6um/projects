@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: canvas
+# key: canvas
+# --
+<canvas id="${1:canvas}" width="$2" height="$3">
+  Canvas not supported ...
+</canvas>$0

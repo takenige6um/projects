@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# key: table
+# name: table
+# --
+<table border=1 style="border-collapse:collapse;">
+  <caption>【${1:表の例}】</caption>
+  <thead>
+    <tr>
+      <th>${2:品名}</th><th>${3:単価}</th><th>${4:個数}</th><th>${5:価格}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>${6:商品A}</td><td>${7:30}</td><td>${8:1}</td><td>${9:60}</td>
+    </tr>
+    <tr>
+      <td>${10:商品B}</td><td>${11:50}</td><td>${12:2}</td><td>${13:100}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>${14:計}</th><td><br></td><td><br></td><td>${15:160}</td>
+    </tr>
+  </tfoot>
+</table>$0

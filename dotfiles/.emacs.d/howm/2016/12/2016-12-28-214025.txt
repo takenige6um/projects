@@ -1,0 +1,4 @@
+= 今、majorーmodeの設定中です。Emacs実践入門のP.167あたり。
+[2016-12-28 21:40] >>> ~/projects/dotfiles/.emacs.d/init.el
+C-c C-c でメモの保存と同時にバッファを閉じる。
+

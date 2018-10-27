@@ -1,0 +1,4 @@
+
+((digest . "d2798c11eb5506a23c82416d4719689f") (undo-list nil (";; " . -21432) 21480 nil ("
+" . 21481) ((marker) . -1) nil ("    (define-key map (kbd \"C-;\") yas-maybe-expand)" . 21481) ((marker . 21478) . -29) ((marker) . -49) nil ("
+" . 14297) ((marker) . -1) nil (";; " . -14234) 14299 nil ("                      (define-key map (kbd \"C-;\")   'yas-next-field-or-maybe-expand)" . 14300) ((marker . 14297) . -47) ((marker) . -84) (t 23203 55681 465867 214000) nil ("T" . 14295) ((marker) . -1) nil (14295 . 14296) nil (14344 . 14347) nil ("T" . -14344) ((marker) . -1) 14345 nil ("A" . -14345) ((marker) . -1) ("B" . -14346) ((marker) . -1) 14347 nil (14234 . 14237) 14296 nil (14297 . 14382) 14256 nil (21507 . 21510) nil ("T" . -21507) ((marker) . -1) ("A" . -21508) ((marker) . -1) ("B" . -21509) ((marker) . -1) 21510 nil (21432 . 21435) 21477 nil (21478 . 21528) 21454 (t 23200 58353 254117 958000)))

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: meter
+# key: meter
+# --
+<section>
+  進捗状況:<progress value="${1:40}" max="${2:100}">${3:40}%</progress>
+  測定状況:<meter value="${4:70}" min="${5:0}" max="${6:100}" optimum="${7:0}" low="${8:30}" high="${9:80}">${10:70}%</meter>
+</section>$0
