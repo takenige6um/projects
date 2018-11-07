@@ -1761,7 +1761,7 @@ Use CREATE-TEMP-F for creating temp copy."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ▼要拡張機能インストール▼
 ;;; P201-202 絵文字の入力補助 emoji.el
-(require 'emoji)
+;; (require 'emoji)
 
 
 
