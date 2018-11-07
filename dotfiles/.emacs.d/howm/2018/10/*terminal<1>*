@@ -1,0 +1,92 @@
+inomoto@YOSHIO:~/projects/dotfiles/.emacs.d/howm/2018/10(master⚡) » cd
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » zsh_stats                                                      
+     1  127  35.5742%   cd
+     2  30   8.40336%   git
+     3  25   7.0028%    vim
+     4  19   5.32213%   node
+     5  14   3.92157%   mkdir
+     6  12   3.36134%   npm
+     7  10   2.80112%   echo
+     8  7    1.96078%   emacs
+     9  6    1.68067%   ls
+    10  5    1.40056%   sudo
+    11  5    1.40056%   brew
+    12  4    1.12045%   vi
+    13  4    1.12045%   nvm
+    14  4    1.12045%   make
+    15  4    1.12045%   curl
+    16  4    1.12045%   $
+    17  3    0.840336%  source
+    18  3    0.840336%  cat
+    19  2    0.560224%  touch
+    20  2    0.560224%  tic
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » echo "$PS1"                                                      
+%{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$fg[cyan]%}%m\
+%{$reset_color%}:%{$fg[magenta]%}%~\
+$(git_prompt_info) \
+%{$fg[red]%}%(!.#.»)%{$reset_color%} 
+inomoto@YOSHIO:~(master⚡) » cd projects                     
+inomoto@YOSHIO:~/projects(master⚡) » git status                      
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        dotfiles/.emacs.d/howm/2018/10/2018-10-27-232233.txt
+        dotfiles/.emacs.d/undohist/!Users!inomoto!.emacs.d!howm!2018!10!2018-10-27-232233.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+inomoto@YOSHIO:~/projects(master⚡) » git add dotfiles/.emacs.d/howm/2018/10/2018-10-27-232233.txt
+inomoto@YOSHIO:~/projects(master⚡) » git commit -m "Add text"                                    
+[master 797188b] Add text
+ 1 file changed, 98 insertions(+)
+ create mode 100644 dotfiles/.emacs.d/howm/2018/10/2018-10-27-232233.txt
+inomoto@YOSHIO:~/projects(master⚡) » git log                                                     
+commit 797188b4649c57c3740d6adf2526dcef5d04d960 (HEAD -> master)
+Author: Yoshio Inomoto <oreigen0441@icloud.com>
+Date:   Sun Oct 28 01:06:24 2018 +0900
+
+    Add text
+
+commit a5d703e9645cb6c3129a890f915f93c051cb9227 (origin/master, origin/HEAD)
+Author: Yoshio Inomoto <oreigen0441@icloud.com>
+Date:   Sat Oct 27 13:43:20 2018 +0900
+
+    Add dotfiles dir
+
+commit 0bd8dc0e66276d93b9bc3c5faaaf742448a55b89
+Author: takenige6um <24409864+takenige6um@users.noreply.github.com>
+Date:   Fri Oct 26 22:07:40 2018 +0900
+
+    Delete README.md
+
+commit 8abe7b9da5484564b559bccd836439a9acbd4011
+Author: takenige6um <oreigen0441@icloud.com>
+Date:   Wed Dec 14 21:12:03 2016 +0900
+
+    Initial commit
+inomoto@YOSHIO:~/projects(master⚡) » git push                                                    
+Enter passphrase for key '/Users/inomoto/.ssh/id_rsa': 
+To github.com:takenige6um/projects.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:takenige6um/projects.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+inomoto@YOSHIO:~/projects(master⚡) »                                                                   1 ↵
+inomoto@YOSHIO:~/projects(master⚡) »cd                                                                 1 ↵
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
