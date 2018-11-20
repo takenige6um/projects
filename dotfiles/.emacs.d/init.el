@@ -27,7 +27,7 @@
 
 ;; C-c m     multi-turm
 
-
+;; M-x load-theme return ir-black
 
 
 ;; ▼要拡張機能インストール▼
@@ -434,28 +434,28 @@
   ;;  )
   ;;(setq web-mode-enable-heredoc-fontification t)
 )
-(add-hook 'web-mode-hook  'web-mode-hook)
+;; (add-hook 'web-mode-hook  'web-mode-hook)
 ;; 色の設定
-(custom-set-faces
- '(web-mode-doctype-face
-   ((t (:foreground "#82AE46"))))                          ; doctype
- '(web-mode-html-tag-face
-   ((t (:foreground "#E6B422" :weight bold))))             ; 要素名
- '(web-mode-html-attr-name-face
-   ((t (:foreground "#C97586"))))                          ; 属性名など
- '(web-mode-html-attr-value-face
-   ((t (:foreground "#82AE46"))))                          ; 属性値
- '(web-mode-comment-face
-   ((t (:foreground "#D9333F"))))                          ; コメント
- '(web-mode-server-comment-face
-   ((t (:foreground "#D9333F"))))                          ; コメント
- '(web-mode-css-rule-face
-   ((t (:foreground "#A0D8EF"))))                          ; cssのタグ
- '(web-mode-css-pseudo-class-face
-   ((t (:foreground "#FF7F00"))))                          ; css 疑似クラス
- '(web-mode-css-at-rule-face
-   ((t (:foreground "#FF7F00"))))                          ; cssのタグ
-)
+;; (custom-set-faces
+;;  '(web-mode-doctype-face
+;;    ((t (:foreground "#82AE46"))))                          ; doctype
+;;  '(web-mode-html-tag-face
+;;    ((t (:foreground "#E6B422" :weight bold))))             ; 要素名
+;;  '(web-mode-html-attr-name-face
+;;    ((t (:foreground "#C97586"))))                          ; 属性名など
+;;  '(web-mode-html-attr-value-face
+;;    ((t (:foreground "#82AE46"))))                          ; 属性値
+;;  '(web-mode-comment-face
+;;    ((t (:foreground "#D9333F"))))                          ; コメント
+;;  '(web-mode-server-comment-face
+;;    ((t (:foreground "#D9333F"))))                          ; コメント
+;;  '(web-mode-css-rule-face
+;;    ((t (:foreground "#A0D8EF"))))                          ; cssのタグ
+;;  '(web-mode-css-pseudo-class-face
+;;    ((t (:foreground "#FF7F00"))))                          ; css 疑似クラス
+;;  '(web-mode-css-at-rule-face
+;;    ((t (:foreground "#FF7F00"))))                          ; cssのタグ
+;; )
 
 
 ;; 主なキーアサイン
@@ -642,14 +642,14 @@
 
 
 
- (when (require 'color-theme nil t)
+;; (when (require 'color-theme nil t)
  ;;テーマを読み込むための設定
-  (color-theme-initialize)
+;;  (color-theme-initialize)
 ;; ;;テーマhoberに変更する
  ;; (color-theme-hober))
  ;; (color-theme-charcoal-black))
  ;; (color-theme-comidia))
-  (color-theme-clarity))
+ ;; (color-theme-clarity))
  ;; (color-theme-goldenrod))
  ;; (color-theme-ld-dark))
  ;; (color-theme-midnight))
@@ -695,6 +695,15 @@
  ;; (load-theme 'atom-dark t)
  ;; (load-theme 'solarized-dark t)
  ;; (load-theme 'solarized-light t)
+
+(load-theme 'ir-black t)
+;; To use this theme, download it to ~/.emacs.d/themes. In your `.emacs' or
+;; `init.el', add this line:
+;;
+   (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;;
+;; Once you have reloaded your configuration (`eval-buffer'), do `M-x
+;; load-theme' and select "ir-black".
 
 
 

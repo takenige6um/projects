@@ -1,0 +1,11 @@
+= Emacs 設定
+[2018-11-18 00:53] 
+
+
+Vim：日本語の文字化けへの対応を攻略。もう怖くない！ http://www-creators.com/archives/1486
+
+Vim Cheat Sheet        https://vim.rtorr.com/lang/ja/
+
+Vimのカラースキームを探しまくれるサイト「Vim Colors」  https://www.softantenna.com/wp/webservice/vim-colors/
+
+  メジャーなエディタを使う利点の一つに、さまざまな拡張機能や、テーマが存在することがあげられるかもしれません。本日紹介する「Vim Colors」http://vimcolors.com/は、Vimユーザーのためのカラースキーム検索サイトです。Vimは世界屈指の人気エディタなので、なんと全231個ものカラースキームを検索することができます。

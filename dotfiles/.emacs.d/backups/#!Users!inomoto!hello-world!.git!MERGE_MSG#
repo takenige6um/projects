@@ -1,0 +1,168 @@
+inomoto@YOSHIO:~/projects/dotfiles/.emacs.d(master⚡) » cd
+inomoto@YOSHIO:~(master⚡) » source .bash_profile       
+inomoto@YOSHIO:~(master⚡) » gi                                                    
+inomoto@YOSHIO:~(master⚡) » mkdir /igenfunction/ascii/binarization/
+mkdir: /igenfunction/ascii: No such file or directory
+inomoto@YOSHIO:~(master⚡) mkdir ~/igenfunction/ascii/binarization/                             1 ↵
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » 
+inomoto@YOSHIO:~(master⚡) » emacs -version                       
+GNU Emacs 25.1.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+GNU Emacs comes with ABSOLUTELY NO WARRANTY.
+You may redistribute copies of GNU Emacs
+under the terms of the GNU General Public License.
+diff --git a/README.md b/README.md
+index f386a13..5b4a045 100644
+--- a/README.md
++++ b/README.md
+@@ -5,4 +5,7 @@ just another repository
+ 
+ # BabyMetalゆいちゃん脱退
+ 
+-  - feature-A
+diff --git a/README.md b/README.md
+index f386a13..5b4a045 100644
+--- a/README.md
++++ b/README.md
+@@ -5,4 +5,7 @@ just another repository
+ 
+ # BabyMetalゆいちゃん脱退
+ 
+-  - feature-A
+\ No newline at end of file
++    - feature-A
++
++
++      - feature-B 追加せり
+\ No newline at end of file
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+inomoto@YOSHIO:~/hello-world(master⚡) » git status         
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .README.md.swp
+        .hello-world.php.swp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+inomoto@YOSHIO:~/hello-world(master⚡) » 
+inomoto@YOSHIO:~/hello-world(master⚡) » echo README.md 
+README.md
+inomoto@YOSHIO:~/hello-world(master⚡) » emacs README.md 
+2018-11-17 21:30:44.203 Emacs-x86_64-10_9[9683:1369935] Failed to initialize color list unarchiver: Error
+ Domain=NSCocoaErrorDomain Code=4864 "*** -[NSKeyedUnarchiver _initForReadingFromData:error:throwLegacyEx
+ceptions:]: non-keyed archive cannot be decoded by NSKeyedUnarchiver" UserInfo={NSDebugDescription=*** -[
+NSKeyedUnarchiver _initForReadingFromData:error:throwLegacyExceptions:]: non-keyed archive cannot be deco
+ded by NSKeyedUnarchiver}                                                                               
+inomoto@YOSHIO:~/hello-world(master⚡) » git checkout -                  
+M       README.md
+Switched to branch 'feature-B'
+inomoto@YOSHIO:~/hello-world(feature-B⚡) » git add README.md               
+inomoto@YOSHIO:~/hello-world(feature-B⚡) » git commit -m "Add feature-B"   
+[feature-B 3e081d4] Add feature-B
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+inomoto@YOSHIO:~/hello-world(feature-B⚡) » git checkout -              
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+inomoto@YOSHIO:~/hello-world(master⚡) » emacs README.md            
+2018-11-17 21:40:24.433 Emacs-x86_64-10_9[9749:1374651] Failed to initialize color list unarchiver: Error
+ Domain=NSCocoaErrorDomain Code=4864 "*** -[NSKeyedUnarchiver _initForReadingFromData:error:throwLegacyEx
+ceptions:]: non-keyed archive cannot be decoded by NSKeyedUnarchiver" UserInfo={NSDebugDescription=*** -[
+NSKeyedUnarchiver _initForReadingFromData:error:throwLegacyExceptions:]: non-keyed archive cannot be deco
+ded by NSKeyedUnarchiver}                                                                               
+inomoto@YOSHIO:~/hello-world(master⚡) » git merge --no-ff feature-B          
+hint: Waiting for your editor to close the file... 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+File Edit Options Buffers Tools Help                                                                     
+Merge branch 'feature-B'
+
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit
+
+
+
+
+
+
+
+-uu-:**-F1  MERGE_MSG      All L12    (Fundamental)------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
