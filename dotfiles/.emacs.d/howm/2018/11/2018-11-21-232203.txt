@@ -1,0 +1,248 @@
+= Git わかばちゃんより https://scrapbox.io/wakaba/%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB
+[2018-11-21 23:22] 
+
+基本のコマンド]
+
+[[自分が今いる場所を知る]]
+code:Command line
+ $ pwd
+
+ 出力例：`/Users/wakaba`
+ pwdは、Print Working Directoryの略
+[llminatoll.icon]先頭の「$」マークは打たずに、アルファベットだけを打てばOKですよ🙌
+
+[[ディレクトリ・ファイルの一覧表示]]
+code:Command line
+ $ ls
+
+ [[Windowsの場合]]は  `dir`
+ lsは、List Segmentsの略
+ dirは、Directoryの略
+
+[[ディレクトリの移動]]
+code:Command line
+ $ cd ディレクトリ名
+
+ `$ cd Documents`：Documentsディレクトリへ移動する
+ `$ cd ../`：現在のディレクトリのひとつ上のディレクトリに移動する
+ `$ cd`：ホームディレクトリに移動する
+ `$ cd /`：ルートディレクトリに移動する
+ cd はChange Directoryの略
+
+[[ディレクトリを作る]]
+code:Command line
+    	$ mkdir ディレクトリ名
+
+ 例：lesson-cuiというディレクトリを作りたかったら、`$ mkdir lesson-cli`
+
+ディレクトリを開いて、空のディレクトリができたことを確認。
+
+[**** 🔰基本のGitコマンド]
+
+[[リポジトリを作る]]
+リポジトリ化したいディレクトリに`cd`コマンドで移動後（例： cd lesson-cui）、
+以下のコマンドを打つ
+code:Command line
+    	$ git init
+
+ディレクトリの中に、.gitが作られていれば成功！
+
+[[ステージする]]
+code:Command line
+    	$ git add ファイル名
+
+[[コミットする]]
+code:Command line
+    	$ git commit -m "ここにコミットメッセージを書く"
+
+[[現在の状態を知る]]
+code:Command line
+    	$ git status
+
+git statusで表示される「状態」は、主に3パターンあります。
+
+ ①nothing to commit, working tree clean状態 
+  [https://gyazo.com/570192f6f56e4c7d85065c7abe84a395]
+   「コミットするものもないし、作業ディレクトリも綺麗な状態だよ」という意味
+   作業ディレクトリ＝ステージングエリア＝リポジトリの状態が一致している状態です
+
+ ②ファイルに編集が加えられ、作業ディレクトリに未ステージのファイルがある状態
+  [https://gyazo.com/c6331b4606e677b120d8672a2ea9dafd]
+   赤文字＝未ステージのファイル
+   Gitが「作業ディレクトリでこのファイルに変更が加えられたようだけど、まだステージされていないよ」と教えてくれています
+
+ ③ステージ済のファイルがある状態
+  [https://gyazo.com/a8fa4c005476662959e31e71694b8dea]
+
+   緑文字＝ステージ済のファイル
+   Gitが「コミットの準備ができたファイルがあるよ」と教えてくれています
+   このあとコミットすると、①の状態に戻ります
+
+[[コミットログを見る]]
+code:Command line
+    	$ git log --oneline
+[https://gyazo.com/a51d7dd93998f9c29a83bbdfd0e7fbf8]
+`git log`でもコミットログを閲覧できますが、オプションの`--oneline`をつけたほうがコンパクトで見やすくてオススメです。
+
+[[コミットログを見るのをやめる]]
+code:Command line
+    	$ q
+
+ 過去のコミットが多いと、コミットログが永遠と表示され続けます
+ コミットログの閲覧を中止したい場合
+  「q」キーを押せば、コミットログの閲覧を中止して、コマンドが打てる状態に戻れます
+  qは、Quit（英語で"中止する・やめる"という意味）の略
+
+[[チェックアウトする]]
+code:Command line
+    	$ git checkout コミットID
+
+ git logで表示されたコミットIDから、ロードしたい地点を指定します 
+  例：`$ git checkout 4ca655f`
+
+[[（おまけ）カラフルなコミットツリー]]
+code:Command line
+    	$ git log --graph --oneline --decorate=full
+このコマンドを打ってみると……
+[https://gyazo.com/9a06edc242be3c23db326c5229268341]
+カラフルなコミットツリーがアスキーアートで表示されます！綺麗ですね！
+
+
+
+
+ブランチ]
+
+[[存在するブランチ一覧を見る]]
+code:Command line
+ $ git branch 
+
+ `git branch -a` で、リモートリポジトリを含めたブランチ一覧を見ることができます
+[llminatoll.icon]「リモートリポジトリ」については、第4回目の授業で解説するよ
+
+[[ブランチを作る]]
+code:Command line
+ $ git branch ブランチ名
+
+ 例：「sakana」というブランチを作りたかったら`$ git branch sakana`と打つ
+
+[[ブランチを削除する]]
+code:Command line
+ $ git branch -d ブランチ名
+
+[[ブランチを移動する]]
+code:Command line
+ $ git checkout ブランチ名
+
+[llminatoll.icon]git checkoutは #02コマンド集 でも使いましたね！
+
+[**** 🔰マージ]
+
+[[マージする]]
+code:Command line
+ $ git merge ブランチ名
+
+ 指定したブランチを、現在のブランチに統合する
+  例：masterブランチに、sakanaブランチをマージしたかったら、` $ git  checkout master` してから `$ git merge sakana` する
+
+[**** 🔰コンフリクトの解決]
+コンフリクトが発生したら、該当のファイルを開いて編集し、git add・git commitしなおせばOKです。
+[llminatoll.icon]git add・git commitについては #02コマンド集 でやりましたね！
+
+
+
+
+
+クローン]
+[llminatoll.icon]ここからは、すでに「schoo」リポジトリ https://github.com/elmas3/schoo をフォークしたあとの工程だよ。
+[llminatoll.icon] https://github.com/自分のアカウント名/schoo のページで、「Clone or download」ボタンをクリックし、「Clone with HTTPS」と表示されている下にあるURLをコピーしてね。
+
+[[クローンする]]
+code:Command line
+ $ git clone リモートリポジトリのURL
+
+ リモートリポジトリを自分のパソコンにコピーしてくる
+ 例： `$ git clone https://github.com/自分のアカウント名/schoo` 
+ デフォルトでは[[origin]]という名前で[[リモートリポジトリ名]]が登録されます。
+
+[**** 🔰プッシュ]
+[[プッシュする]]
+code:Command line
+ $ git push リモートリポジトリ名 ブランチ名
+
+ 例： `$ git push origin add-text` 
+  「プッシュしてください originという名前のリモートリポジトリに add-textブランチを」という意味
+
+[**** 🔰プル]
+[[プルする]]
+code:Command line
+  $ git pull リモートリポジトリ名 ブランチ名
+
+ 例： `$ git pull origin master` 
+	 「プルしてください originという名前のリモートリポジトリから masterブランチを」という意味
+
+[**** 🔰フェッチ]
+[[フェッチする]]
+code:Command line
+  $ git fetch リモートリポジトリ名 ブランチ名
+
+ 例： `$ git fetch origin master` 
+	 「フェッチしてください originという名前のリモートリポジトリから masterブランチを」という意味
+
+
+
+
+
+[llminatoll.icon]GitHubを便利に使える「hub」というコマンドラインツールを使って、コマンドからプルリクエストを出してみましょう。
+[llminatoll.icon]Macからの方が簡単に使えるので、ここではMacでの操作を解説します。
+
+[**** 🔰準備]
+[[コマンドラインツール「hub」をインストールする]]
+[[※以下、Macでの操作になります]]
+Homebrewをインストール https://brew.sh/index_ja.html したあとに、以下のコマンドを打ちます。
+code:Command line
+ $ brew install hub 
+
+これで「hub」というコマンドがパソコンに登録されました。
+
+[**** 🔰hubでプルリクエストを出してみる]
+code:Command line
+ #新規ブランチを作り、作ったブランチに移動
+ $ git branch ブランチ名     
+ $ git checkout ブランチ名
+ 
+ # ファイルを編集した後
+ $ git add ファイル名
+ $ git commit -m 'コミットメッセージ'
+ $ git push origin ブランチ名
+
+code:Command line
+ $ hub pull-request -o
+
+ 1行目はプルリクのタイトル
+ ２行目は空行
+ ３行目から、本文の内容
+
+編集が終わるとブラウザでプルリクエストのページが開きます🎉
+
+
+
+
+
+[**** 🔰リモートリポジトリ追従]
+ここでは例として、自分のパソコン上のリポジトリに、「upstream」という名前で本家リポジトリ（ https://github.com/elmas3/schoo ）を追加してあげます。
+その後、「upstream」で更新されたmasterブランチを取得し追従します。
+
+code:Command line
+ $ git remote add upstream https://github.com/elmas3/schoo.git
+
+取得します
+code:Command line
+ $ git fetch upstream
+
+リモートリポジトリ「upstream」のブランチを確認します
+code:Command line
+ $ git branch -a 
+
+マージします。
+code:Command line
+ $ git merge upstream/master
