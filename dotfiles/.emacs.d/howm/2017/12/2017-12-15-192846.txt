@@ -230,7 +230,14 @@
    
    C-<f8>         バッファ全体をインデント
 
+   
+   ---------------------------------
+   web-mode インデント
 
+       M-x web-mode-indent
+       
+           You can run the command
+              ‘web-mode-indent’ with M-x w-inden RET
    ---------------------------------
 
 

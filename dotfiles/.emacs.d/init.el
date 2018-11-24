@@ -535,7 +535,7 @@
       (setq web-mode-script-padding num)
       (setq web-mode-block-padding num)
       )
-    (web-mode-indent 2)
+    ;; (web-mode-indent 2)
 ;; 切り替える時は M-x web-mode-indent してミニバッファでインデント数を入力する。
 
 
