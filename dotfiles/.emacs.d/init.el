@@ -349,7 +349,7 @@
   (defun set-alpha (alpha-num)
     "set frame parameter 'alpha"
     (interactive "nAlpha: ")
-    (set-frame-parameter nil 'alpha (cons alpha-num '(60)))))
+    (set-frame-parameter nil 'alpha (cons alpha-num '(85)))))
     ;; (set-frame-parameter nil 'alpha 65)))
 
 
@@ -696,7 +696,8 @@
  ;; (load-theme 'solarized-dark t)
  ;; (load-theme 'solarized-light t)
 
-(load-theme 'ir-black t)
+(load-theme 'night-owl t)
+;; (load-theme 'ir-black t)
 ;; To use this theme, download it to ~/.emacs.d/themes. In your `.emacs' or
 ;; `init.el', add this line:
 ;;

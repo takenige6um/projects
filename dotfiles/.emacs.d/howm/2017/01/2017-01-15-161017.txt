@@ -1,6 +1,6 @@
 = apacheの起動
 [2017-01-15 16:10] 
-ターミナルに/Applications/apache-tomcat-8.5.9/bin/startup.shをdrag&dropしてreturn.
+ターミナルに/Applications/apache-tomcat-8.0.39/bin/startup.shをdrag&dropしてreturn.
 ブラウザで http://localhost:8080
 
-/Applications/apache-tomcat-8.5.9/bin/shutdown.shで停止
+/Applications/apache-tomcat-8.0.39/bin/shutdown.shで停止
