@@ -384,6 +384,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+
 (setq auto-mode-alist
       (append '(
                 ("\\.\\(html\\|xhtml\\|shtml\\|tpl\\)\\'" . web-mode)
@@ -412,50 +413,53 @@
   ;; htmlの内容をインデント
   ;; TEXTAREA等の中身をインデントすると副作用が起こったりするので
   ;; デフォルトではインデントしない
-  ;;(setq web-mode-indent-style 2)
+  (setq web-mode-indent-style 0)
   ;; コメントのスタイル
   ;;   1:htmlのコメントスタイル(default)
   ;;   2:テンプレートエンジンのコメントスタイル
   ;;      (Ex. {# django comment #},{* smarty comment *},{{-- blade comment --}})
-  (setq web-mode-comment-style 2)
-  ;; 終了タグの自動補完をしない
-  ;;(setq web-mode-disable-auto-pairing t)
-  ;; color:#ff0000;等とした場合に指定した色をbgに表示しない
-  ;;(setq web-mode-disable-css-colorization t)
-  ;;css,js,php,etc..の範囲をbg色で表示
-  ;; (setq web-mode-enable-block-faces t)
-  ;; (custom-set-faces
-  ;;  '(web-mode-server-face
-  ;;    ((t (:background "grey"))))                  ; template Blockの背景色
-  ;;  '(web-mode-css-face
-  ;;    ((t (:background "grey18"))))                ; CSS Blockの背景色
-  ;;  '(web-mode-javascript-face
-  ;;    ((t (:background "grey36"))))                ; javascript Blockの背景色
-  ;;  )
-  ;;(setq web-mode-enable-heredoc-fontification t)
+(setq web-mode-comment-style 2)
+ ;; 終了タグの自動補完をしない
+(setq web-mode-disable-auto-pairing t)
+ ;; color:#ff0000;等とした場合に指定した色をbgに表示しない
+ (setq web-mode-disable-css-colorization t)
+ ;; css,js,php,etc..の範囲をbg色で表示
+ (setq web-mode-enable-block-faces t)
+ (custom-set-faces
+  '(web-mode-server-face
+    ((t (:background "grey"))))                  ; template Blockの背景色
+  '(web-mode-css-face
+    ((t (:background "grey18"))))                ; CSS Blockの背景色
+  '(web-mode-javascript-face
+    ((t (:background "grey36"))))                ; javascript Blockの背景色
+  )
+(setq web-mode-enable-heredoc-fontification t)
 )
-;; (add-hook 'web-mode-hook  'web-mode-hook)
+(add-hook 'web-mode-hook  'web-mode-hook)
 ;; 色の設定
-;; (custom-set-faces
-;;  '(web-mode-doctype-face
-;;    ((t (:foreground "#82AE46"))))                          ; doctype
-;;  '(web-mode-html-tag-face
-;;    ((t (:foreground "#E6B422" :weight bold))))             ; 要素名
-;;  '(web-mode-html-attr-name-face
-;;    ((t (:foreground "#C97586"))))                          ; 属性名など
-;;  '(web-mode-html-attr-value-face
-;;    ((t (:foreground "#82AE46"))))                          ; 属性値
-;;  '(web-mode-comment-face
-;;    ((t (:foreground "#D9333F"))))                          ; コメント
-;;  '(web-mode-server-comment-face
-;;    ((t (:foreground "#D9333F"))))                          ; コメント
-;;  '(web-mode-css-rule-face
-;;    ((t (:foreground "#A0D8EF"))))                          ; cssのタグ
-;;  '(web-mode-css-pseudo-class-face
-;;    ((t (:foreground "#FF7F00"))))                          ; css 疑似クラス
-;;  '(web-mode-css-at-rule-face
-;;    ((t (:foreground "#FF7F00"))))                          ; cssのタグ
-;; )
+
+(custom-set-faces
+ '(web-mode-doctype-face
+   ((t (:foreground "#aa7941"))))                          ; doctype
+ '(web-mode-html-tag-face
+   ;; ((t (:foreground "#E6B422" :weight bold))))             ; 要素名
+   ((t (:foreground "#2e8b57" :weight bold))))             ; 要素名
+ '(web-mode-html-attr-name-face
+   ((t (:foreground "#dda0dd"))))                          ; 属性名など
+ '(web-mode-html-attr-value-face
+   ((t (:foreground "#ffe4b5"))))                          ; 属性値
+ '(web-mode-comment-face
+   ;; ((t (:foreground "#D9333F"))))                          ; コメント
+   ((t (:foreground "#999999"))))                          ; コメント
+ '(web-mode-server-comment-face
+   ((t (:foreground "#999999"))))                          ; コメント
+ '(web-mode-css-rule-face
+   ((t (:foreground "#A0D8EF"))))                          ; cssのタグ
+ '(web-mode-css-pseudo-class-face
+   ((t (:foreground "#FF7F00"))))                          ; css 疑似クラス
+ '(web-mode-css-at-rule-face
+   ((t (:foreground "#FF7F00"))))                          ; cssのタグ
+)
 
 
 ;; 主なキーアサイン
@@ -502,9 +506,9 @@
 
 ;; (require 'web-mode)
 
-;; ;;; emacs 23以下の互換
-;; (when (< emacs-major-version 24)
-;;   (defalias 'prog-mode 'fundamental-mode))
+;; ;; ;;; emacs 23以下の互換
+;; ;; (when (< emacs-major-version 24)
+;; ;;   (defalias 'prog-mode 'fundamental-mode))
 
 ;; ;;; 適用する拡張子
 ;; (add-to-list 'auto-mode-alist '("\\.phtml$"     . web-mode))
@@ -517,7 +521,7 @@
 ;; ;;; インデント数
 ;; (defun web-mode-hook ()
 ;;   "Hooks for Web mode."
-;;   (setq web-mode-html-offset   2)
+;;   (setq web-mode-html-offset   0)
 ;;   (setq web-mode-css-offset    2)
 ;;   (setq web-mode-script-offset 2)
 ;;   (setq web-mode-php-offset    2)
@@ -526,17 +530,18 @@
 ;; (add-hook 'web-mode-hook 'web-mode-hook)
 
 
- (defun web-mode-indent (num)
-      (interactive "nIndent: ")
-      (setq web-mode-markup-indent-offset num)
-      (setq web-mode-css-indent-offset num)
-      (setq web-mode-style-padding num)
-      (setq web-mode-code-indent-offset num)
-      (setq web-mode-script-padding num)
-      (setq web-mode-block-padding num)
-      )
-    ;; (web-mode-indent 2)
+(defun web-mode-indent (num)
+  (interactive "nIndent: ")
+  (setq web-mode-markup-indent-offset num)
+  (setq web-mode-css-indent-offset num)
+  (setq web-mode-style-padding num)
+  (setq web-mode-code-indent-offset num)
+  (setq web-mode-script-padding num)
+  (setq web-mode-block-padding num)
+)
+    (web-mode-indent 0)
 ;; 切り替える時は M-x web-mode-indent してミニバッファでインデント数を入力する。
+;; You can run the command ‘web-mode-indent’ with M-x w-inden RET
 
 
 
@@ -696,8 +701,8 @@
  ;; (load-theme 'solarized-dark t)
  ;; (load-theme 'solarized-light t)
 
-(load-theme 'night-owl t)
-;; (load-theme 'ir-black t)
+;; (load-theme 'night-owl t)
+(load-theme 'ir-black t)
 ;; To use this theme, download it to ~/.emacs.d/themes. In your `.emacs' or
 ;; `init.el', add this line:
 ;;
