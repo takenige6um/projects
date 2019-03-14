@@ -1,0 +1,14 @@
+= google-translate--search-tkk: Failed to search TKK
+[2019-02-11 10:56] >>> ~/projects/dotfiles/.emacs.d/init.el
+
+https://qiita.com/minoruGH/items/75eb4fab53e93653f999
+
+Emacsでgoogle-translateを愛用しています。
+
+ところが数日前から、”Failed to search TKK” というエラーを吐いて突然動かなくなりました。どうやらGoogleの仕様が変わったらしいとのことです。
+
+今日（2018.9.24）、作者の issuse board に応急的な修正案が提示されていたので試してみたらバッチリ動くようになりました。あくまで応急的な対応だと思うので恒久的に機能するかどうかはわかりませんが、とりあえずやれやれです。
+
+
+issuse board: https://github.com/atykhonov/google-translate/issues/52#issuecomment-423742883
+

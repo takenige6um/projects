@@ -1,0 +1,10 @@
+= vagrant date 時間のズレ
+[2019-01-07 20:16] >>> ~/projects/dotfiles/.emacs.d/init.el
+
+ゆるーい備忘録 Vagrant環境の時刻変更したい
+http://uchiharu-memo.hatenablog.com/entry/2016/08/24/224850
+
+
+Engineer-log
+VirtualBox Guest Additions エラー対処法 （CentOS）
+https://engineer-log.net/index.php/2016/06/06/post-281/
