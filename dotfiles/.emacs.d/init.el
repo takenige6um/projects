@@ -20,7 +20,7 @@
 ;; カレントバッファを全て評価                                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; M-x eval-buffer RET
+;; M-x eval-buffer RET     (M-x ev-b)
 ;; M-x eval-region RET ;リージョン選択範囲を評価
 
 ;; C-c , ,   hownメモ
@@ -443,7 +443,8 @@
    ((t (:foreground "#aa7941"))))                          ; doctype
  '(web-mode-html-tag-face
    ;; ((t (:foreground "#E6B422" :weight bold))))             ; 要素名
-   ((t (:foreground "#2e8b57" :weight bold))))             ; 要素名
+   ;; ((t (:foreground "#2e8b57" :weight bold))))             ; 要素名
+   ((t (:foreground "#7567d0" :weight bold))))             ; 要素名
  '(web-mode-html-attr-name-face
    ((t (:foreground "#dda0dd"))))                          ; 属性名など
  '(web-mode-html-attr-value-face
@@ -631,7 +632,9 @@
 ;; Fix error of "Failed to search TKK"
 (defun google-translate--get-b-d1 ()
     ;; TKK='427110.1469889687'
-  (list 427110 1469889687))
+ ;; (list 427110 1469889687))
+  ;; now we have this representation: `TKK='427116.3269864724';
+  (list 427116 3269864724))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 5.6 表示・装飾に関する設定                                 ;;
