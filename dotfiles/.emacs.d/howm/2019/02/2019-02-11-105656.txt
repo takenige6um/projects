@@ -1,7 +1,7 @@
 = google-translate--search-tkk: Failed to search TKK
 [2019-02-11 10:56] >>> ~/projects/dotfiles/.emacs.d/init.el
 
-https://qiita.com/minoruGH/items/75eb4fab53e93653f999
+ZZhttps://qiita.com/minoruGH/items/75eb4fab53e93653f999
 
 Emacsでgoogle-translateを愛用しています。
 

@@ -705,7 +705,7 @@
  ;; (list 427110 1469889687))
   ;; now we have this representation: `TKK='427116.3269864724';
   ;;(list 427116 3269864724))
-(defun google-translate--search-tkk () "Search TKK." (list 430675 2721866130))
+(defun google-translate--search-tkk () "Search TKK." (list 427110 1469889687))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

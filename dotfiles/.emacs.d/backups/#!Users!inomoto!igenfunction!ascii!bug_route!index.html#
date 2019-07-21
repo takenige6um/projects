@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>虫の軌跡</title>
+        <script>
+         var canvas, context, canvasRect;
+         var canvasBug, contextBug;
+         var route = new Array();
+         var target;
+         var x, y, prevX, prevY, angle;  // ムシの座標、直前の座標、向き
+         var hue = 0;                    // 色相
+         var speed = 5;                  // 移動速度 初期値2
+         var status = "wait";
+
+         function init() {
+             // キャンバスの取得
+             canvas = document.getElementById("route");
+             context = canvas.getContext("2d");
+             canvasBug = document.getElementById("bug");
+             contextBug = canvasBug.getContext("2d");
+             // キャンバスのサイズを設定（補正したブラウザのサイズをセット）
+             canvas.width = window.innerWidth - 20;
+             canvas.height = window.innerHeight -120;
+             canvasBug.width = window.innerWidth - 20;
+             canvasBug.height = window.innerHeight -120;
+             // キャンバスの絶対座標を取得
+             canvasRect = canvas.getBoundingClientRect();
+
+             // ムシの初期値
+             x = canvasBug.width/2;
+             y = canvasBug.height/2;
+             prevX = null;
+             prevY = null;
+             angle = 0;
+             target = 0;
+
+             // タイマー開始
+             setInterval(moveBug, 20);
+         }
+
+         function moveBug() {
+             if (route.length > target) {
+                 // 目的地までの距離
+                 var dx = route[target].x - x;
+                 var dy = route[target].y - y;
+                 var d = Math.sqrt(Math.pow(dx, 2)+Math.pow(dy, 2));
+                 // 目的地へ移動
+                 x += dx/d * speed;
+                 y += dy/d * speed;
+                 // 向きを変更
+                 /* angle = Math.atan2(dy, dx) + Math.PI/2; */
+                 angle = Math.atan2(dy, dx) + Math.PI/2 + 1;
+                 /* angle = Math.atan2(dy, dx) + Math.PI/2 + 2; */
+                 /* angle = Math.atan2(dy, dx) + Math.PI/2 + 3; */
+
+                 // 次の目的地へ
+                 if (d < 10) {
+                     route[target].x = null;
+                     target++;
+                     // 色相を加算
+                     hue++;
+                     if (hue == 360) hue = 0;
+                 }
+             }
+
+             // ムシ用キャンバスのクリア
+             contextBug.clearRect(0, 0, canvasBug.width, canvasBug.height);
+             // マウスの軌跡、ムシ、ムシの軌跡の描画
+             if (document.getElementById("mouseRoute").checked) drawMouseRoute();
+             drawBug();
+             if (target > 0) drawBugRoute();
+         }
+
+         function drawBug() {
+             // キャンバスの保存
+             contextBug.save();
+             // キャンバスの移動、回転
+             contextBug.translate(x, y);
+             contextBug.rotate(angle);
+             // ムシを描画
+             var bug = String.fromCodePoint(0x1F41D);
+             contextBug.textAlign = "center";
+             contextBug.textBaseline = "middle";
+             /* contextBug.font = "20px sans-serif"; */
+             contextBug.font = "30px sans-serif";
+             contextBug.fillText(bug, 0, 0);
+             // キャンバスの復元
+             contextBug.restore();
+         }
+
+         function drawBugRoute() {
+             // ムシの軌跡を描画
+             context.strokeStyle = "hsl("+hue+", 100%, 50%)";
+             context.lineWidth = 2;
+             if (prevX != null) {
+                 context.beginPath();
+                 context.moveTo(prevX, prevY);
+                 context.lineTo(x, y);
+                 context.stroke();
+             }
+             // 座標を保存
+             prevX = x;
+             prevY = y;
+         }
+
+         function drawMouseRoute() {
+             // マウスの軌跡を描画
+             contextBug.strokeStyle = "#CCCCCC";
+             contextBug.beginPath();
+             var rx, ry;
+             for (var i=0; i<route.length; i++) {
+                 if (route[i].x != null) {
+                     rx = route[i].x;
+                     ry = route[i].y;
+                 } else {
+                     // 通過している時
+                     rx = x;
+                     ry = y;
+                 }
+                 if (i == 0) {
+                     contextBug.moveTo(rx, ry);
+                 } else {
+                     contextBug.lineTo(rx, ry);
+                 }
+             }
+             contextBug.stroke();
+         }
+
+         function startDraw(event) {
+             // マウスボタンが押された位置を取得
+             var cx = event.clientX - canvasRect.left;
+             var cy = event.clientY - canvasRect.top;
+             // 目的地を変更
+             route[target] = {"x":cx, "y":cy};
+             // 以降のルートを削除
+             route.length = target + 1;
+             // ステータスをmoveに変更
+             status = "move";
+         }
+
+         function onDraw(event) {
+             // マウスカーソルの位置を取得
+             var cx = event.clientX - canvasRect.left;
+             var cy = event.clientY - canvasRect.top;
+             // ルートに追加
+             if (status == "move") route.push({"x":cx, "y":cy});
+
+             // チェックボックスにフォーカスを当てる
+             document.getElementById("mouseRoute").focus();
+         }
+
+         function clearRoute() {
+             // ルート用キャンバスのクリア
+             context.clearRect(0, 0, canvas.width, canvas.height);
+             // ルートの消去
+             route = [];
+             target = 0;
+             prevX = null;
+             prevY = null;
+             // ステータスをwaitに変更
+             status = "wait";
+         }
+        </script>
+        <style>
+         div {position: relative;}
+         #bug {
+             position: absolute;
+             top: 0px;
+             left: 0px;
+             border: solid thin #CCCCCC;
+         }
+        </style>
+    </head>
+    <body onload="init()">
+        <p>ムシの軌跡</p>
+        <input type="button" value="クリア" onclick="clearRoute()" />
+        <input type="checkbox" id="mouseRoute" checked />マウスの軌跡
+        <hr/>
+        <div>
+            <canvas id="route" width="640" height="640">
+                Canvas not supported ...
+            </canvas>
+            <canvas id="bug" width="640" height="640" onmousedown="startDraw(event)"
+                    onmousemove="onDraw(event)">
+                Canvas not supported ...
+            </canvas>
+        </div>
+    </body>
+</html>
